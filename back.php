@@ -1,5 +1,5 @@
 ﻿<?php
-include_once "base.php";
+include_once "./base.php";
 
 ?>
 
@@ -43,6 +43,9 @@ include_once "base.php";
                     <a style="color:#000; font-size:13px; text-decoration:none;" href="?do=collection">
                         <div class="mainmu">COLLECTION</div>
                     </a>
+                    <a style="color:#000; font-size:13px; text-decoration:none;" href="?do=skills">
+                        <div class="mainmu">SKILLS</div>
+                    </a>
                     <!-- <a style="color:#000; font-size:13px; text-decoration:none;" href="?do=mvim">
                         <div class="mainmu">動畫圖片管理 </div>
                     </a> -->
@@ -53,14 +56,14 @@ include_once "base.php";
                         <div class="mainmu">進站總人數管理 </div>
                     </a> -->
                     <a style="color:#000; font-size:13px; text-decoration:none;" href="?do=bottom">
-                        <div class="mainmu">頁尾版權資料管理 </div>
+                        <div class="mainmu">FOOTER </div>
                     </a>
                     <!-- <a style="color:#000; font-size:13px; text-decoration:none;" href="?do=news">
                         <div class="mainmu">最新消息資料管理 </div>
                     </a> -->
-                    <!-- <a style="color:#000; font-size:13px; text-decoration:none;" href="?do=admin">
-                        <div class="mainmu">管理者帳號管理 </div>
-                    </a> -->
+                    <a style="color:#000; font-size:13px; text-decoration:none;" href="?do=admin">
+                        <div class="mainmu">USERS</div>
+                    </a>
                     <!-- <a style="color:#000; font-size:13px; text-decoration:none;" href="?do=menu">
                         <div class="mainmu">選單管理 </div>
                     </a> -->
@@ -80,7 +83,7 @@ include_once "base.php";
                             <td style="width:70%;font-weight:800; border:#333 1px solid; border-radius:3px;"
                                 class="cent"><a href="?do=admin" style="color:#000; text-decoration:none;">後台管理區</a>
                             </td>
-                            <td><button onclick="location.replace('index.php?do=login')"
+                            <td><button onclick="location.replace('index.php')"
                                     style="width:99%; margin-right:2px; height:50px;">管理登出</button></td>
                         </tr>
                     </tbody>

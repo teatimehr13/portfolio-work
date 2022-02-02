@@ -27,6 +27,11 @@ switch($DB->table){
         $data['sh']=1;
         $data['parent']=0;
     break;
+    case "skills":
+        $data['text']=$_POST['text'];
+        $data['symbol']=$_POST['symbol']??'';
+        $data['sh']=1;
+    break;
     default:
         $data['text']=$_POST['text']??'';
         $data['sh']=1;

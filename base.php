@@ -43,6 +43,13 @@ class DB{
             $this->append="COLLECTIONE替代文字";
             $this->upload="COLLECTION圖片";
             break;
+            case "skills";
+            $this->title="SKILLS管理";
+            $this->button="新增SKILLS";
+            $this->text="SKILLS文字介紹";
+            $this->symbol="SKILLS符號";
+          
+            break;
             case "mvim";
             $this->title="動畫圖片管理";
             $this->button="新增動畫圖片";
@@ -204,6 +211,7 @@ $Me=new DB('me');
 $Collection=new DB('collection');
 $Mvim=new DB('mvim');
 $Image=new DB('image');
+$Skills=new DB('skills');
 $News=new DB('news');
 $Admin=new DB('admin');
 $Menu=new DB('menu');
@@ -221,6 +229,9 @@ switch($tt){
     break;
     case "mvim":
         $DB=$Mvim;
+    break;
+    case "skills":
+        $DB=$Skills;
     break;
     case "image":
         $DB=$Image;
