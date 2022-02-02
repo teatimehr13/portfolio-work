@@ -80,6 +80,7 @@ class DB{
             break;
         }
     }
+    
 
     public function find($id){
         $sql="SELECT * FROM $this->table WHERE ";
@@ -209,12 +210,12 @@ $Bottom=new DB('bottom');
 $Title=new DB('title');
 $Me=new DB('me');
 $Collection=new DB('collection');
-$Mvim=new DB('mvim');
-$Image=new DB('image');
+// $Mvim=new DB('mvim');
+// $Image=new DB('image');
 $Skills=new DB('skills');
-$News=new DB('news');
+// $News=new DB('news');
 $Admin=new DB('admin');
-$Menu=new DB('menu');
+// $Menu=new DB('menu');
 
 //$tt=(isset($_GET['do']))?$_GET['do']:'';
 //$tt=isset($_GET['do'])??'';

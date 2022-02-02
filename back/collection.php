@@ -4,10 +4,16 @@
     <table width="100%">
             <tbody>
                 <tr class="yel">
-                    <td width="45%">圖片</td>
-                    <td width="23%">文字</td>
-                    <td width="7%">顯示</td>
-                    <td width="7%">刪除</td>
+                    <td width="30%">img</td>
+                    <td width="10%">title</td>
+                    <td width="10%">category</td>
+                    <td width="10%">icon_eyes</td>
+                    <td width="10%">icon_gh</td>
+                    <td width="10%">link_eyes</td>
+                    <td width="10%">link_gh</td>
+                    <td width="2%">rank</td>
+                    <td width="4%">show</td>
+                    <td width="4%">del</td>
                     <td></td>
                 </tr>
                 <?php
@@ -16,18 +22,42 @@
                     $checked=($row['sh']==1)?'checked':'';
                 ?>
                 <tr>
-                    <td width="45%">
-                        <img src="./img/<?=$row['img'];?>" style="width:300px;height:30px">
+                    <td width="30%">
+                        <img src="./img/<?=$row['img'];?>" style="width:100px;height:80px">
                     </td>
-                    <td width="23%">
+                    <td width="10%">
                         <input type="text" name="text[]" value="<?=$row['text'];?>">
                     </td>
-                    <td width="7%">
-                        <input type="radio" name="sh" value="<?=$row['id'];?>" <?=$checked;?>>
-                    </td>
-                    <td width="7%">
-                        <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
 
+                    <td width="10%">
+                        <input type="text" name="category[]" value="<?=$row['category'];?>">
+                    </td>
+
+                    <td width="10%">
+                        <input type="text" name="icon_eyes[]" value="<?=$row['icon_eyes'];?>">
+                    </td>
+
+                    <td width="10%">
+                        <input type="text" name="icon_gh[]" value="<?=$row['icon_gh'];?>">
+                    </td>
+
+                    <td width="10%">
+                        <input type="text" name="link_eyes[]" value="<?=$row['link_eyes'];?>">
+                    </td>
+
+                    <td width="10%">
+                        <input type="text" name="link_gh[]" value="<?=$row['link_gh'];?>">
+                    </td>
+
+                    <td width="2%">
+                        <input type="text" name="rank[]" value="<?=$row['rank'];?>">
+                    </td>
+
+                    <td width="4%">
+                    <input type="checkbox" name="sh[]" value="<?= $row['id']; ?>" <?= $checked; ?>>
+                    </td>
+                    <td width="4%">
+                        <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
                     </td>
                     <td>
                     <input type="hidden" name="id[]" value="<?=$row['id'];?>">

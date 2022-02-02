@@ -23,6 +23,16 @@ foreach($_POST['id'] as $key => $id){
                 $data['href']=$_POST['href'][$key];
                 $data['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
             break;
+            case "collection":
+                $data['text']=$_POST['text'][$key];
+                $data['category']=$_POST['category'][$key];
+                $data['icon_eyes']=$_POST['icon_eyes'][$key];
+                $data['icon_gh']=$_POST['icon_gh'][$key];
+                $data['link_eyes']=$_POST['link_eyes'][$key];
+                $data['link_gh']=$_POST['link_gh'][$key];
+                $data['rank']=$_POST['rank'][$key];
+                $data['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
+            break;
             default:
             //ad,,news,image,mvim
                 $data['text']=isset($_POST['text'])?$_POST['text'][$key]:'';

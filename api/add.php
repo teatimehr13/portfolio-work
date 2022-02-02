@@ -32,6 +32,16 @@ switch($DB->table){
         $data['symbol']=$_POST['symbol']??'';
         $data['sh']=1;
     break;
+    case "collection":
+        $data['text']=$_POST['text'];
+        $data['category']=$_POST['category'];
+        $data['icon_eyes']=$_POST['icon_eyes']??'';
+        $data['icon_gh']=$_POST['icon_gh']??'';
+        $data['link_eyes']=$_POST['link_eyes']??'';
+        $data['link_gh']=$_POST['link_gh']??'';
+        $data['rank']=$_POST['rank']??'';
+        $data['sh']=1;
+    break;
     default:
         $data['text']=$_POST['text']??'';
         $data['sh']=1;
