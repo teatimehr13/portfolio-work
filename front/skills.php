@@ -21,9 +21,6 @@
 
     </div>
 
-       
-
-
 
     <div class="skillsContent">
         <?php
