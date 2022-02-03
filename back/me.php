@@ -4,8 +4,9 @@
     <table width="100%">
             <tbody>
                 <tr class="yel">
-                    <td width="45%">圖片</td>
+                    <td width="20%">圖片</td>
                     <td width="23%">文字</td>
+                    <td width="10%">順序</td>
                     <td width="7%">顯示</td>
                     <td width="7%">刪除</td>
                     <td></td>
@@ -16,14 +17,19 @@
                     $checked=($row['sh']==1)?'checked':'';
                 ?>
                 <tr>
-                    <td width="45%">
-                        <img src="./img/<?=$row['img'];?>" style="width:300px;height:30px">
+                    <td width="20%">
+                        <img src="./img/<?=$row['img'];?>" style="width:120px;height:100px">
                     </td>
                     <td width="23%">
-                        <input type="text" name="text[]" value="<?=$row['text'];?>">
+                        <textarea name="text[]"><?=$row['text'];?></textarea>
                     </td>
+
+                    <td width="10%">
+                        <input type="text" name="ordered[]" value="<?=$row['ordered'];?>" style="width: 50px;">
+                    </td>
+
                     <td width="7%">
-                        <input type="radio" name="sh" value="<?=$row['id'];?>" <?=$checked;?>>
+                        <input type="checkbox" name="sh[]" value="<?=$row['id'];?>" <?=$checked;?>>
                     </td>
                     <td width="7%">
                         <input type="checkbox" name="del[]" value="<?=$row['id'];?>">

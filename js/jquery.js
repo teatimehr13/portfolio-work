@@ -1,24 +1,24 @@
 //header
 
-    // $(document).ready(function() {
-    $(function () {
-        $(window).scroll(function () {
-    
-            var $nav = $(".header");
-            $('.header').unbind();
-            $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
-        });
+// $(document).ready(function() {
+$(function () {
+    $(window).scroll(function () {
+
+        var $nav = $(".header");
+        $('.header').unbind();
+        $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
     });
-    
+});
+
 //cover
 
-    $(function() {
-                
-        setTimeout(function() {
-            $('.fly-in-text').removeClass('hidden');
-        }, 500);
-        
-    
+$(function () {
+
+    setTimeout(function () {
+        $('.fly-in-text').removeClass('hidden');
+    }, 500);
+
+
     if ($(document).width() < 768) {
         $(document).ready(function () {
             $('.fly-in-text li').hide();
@@ -26,8 +26,8 @@
         }
         )
     }
-    
-    });
+
+});
 
 //collection
 
@@ -47,7 +47,7 @@
 //         // console.log('navbar',navbar)
 //         scrollReport.innerText = `目前所在的位置${y}`;
 //         console.log(`目前所在的位置${y}`);
-   
+
 
 //     const collection = document.getElementById('collection');
 //     const top = collection.offsetTop;
@@ -60,7 +60,7 @@
 //         });
 //     }
 
-    
+
 //     $(document).off('scroll'); 
 // })
 // })
@@ -85,9 +85,9 @@ $(document).ready(function () {
         // $('.collection-row').removeClass();
         // $('.f2n').each(function (index) {
         //     $(this).delay(200 * index).fadeIn();
-        })
+    })
     // })
-   
+
 
     $('.b2n-btn').on('click', function () {
         $('.all').hide();
@@ -96,17 +96,17 @@ $(document).ready(function () {
         // $('.b2n').each(function (index) {
         //     $(this).delay(200 * index).fadeIn();
         // })
-    
-    
+
+
     })
 
-    
+
     $('.others-btn').on('click', function () {
         $('.all').hide();
         $('.others').fadeIn();
 
-    
-    
+
+
     })
 
 })
@@ -147,37 +147,69 @@ $(document).ready(function () {
         }
     })
 
-//skills
+    //skills
 
-    $('.fa-html5').hover(function(){
+    $('.fa-html5').hover(function () {
         $('.htmlContent').fadeIn();
-    },function(){
-            $('.htmlContent').hide()
-        
+    }, function () {
+        $('.htmlContent').hide()
+
     })
 
-    $('.fa-php').hover(function(){
+    $('.fa-php').hover(function () {
         $('.phpContent').fadeIn();
-    },function(){
-            $('.phpContent').hide()
-        
+    }, function () {
+        $('.phpContent').hide()
+
     })
 
-    $('.fa-css3-alt').hover(function(){
+    $('.fa-css3-alt').hover(function () {
         $('.cssContent').fadeIn();
-    },function(){
-            $('.cssContent').hide()
-        
+    }, function () {
+        $('.cssContent').hide()
+
     })
 
-    $('.fa-js-square').hover(function(){
+    $('.fa-js-square').hover(function () {
         $('.jsContent').fadeIn();
-    },function(){
-            $('.jsContent').hide()
-        
+    }, function () {
+        $('.jsContent').hide()
+
     })
 
+    //me
 
+    $('.first').show();
+    // $('.left').on('click', function () {
+    //     if ($('.meContent').hasClass('first')) {
+    //         $('.first').show();
+    //     }
+    //     if ($('.meContent').hasClass('second')) {
+    //         $('.second').hide();
+    //         $('.first').show();
+    //     }
+    //     if ($('.meContent').hasClass('third first')) {
+    //         $('.third').hide();
+    //         $('.second').show();
+    //     }
+     
+    // })
+
+    $('.right').on('click', function () {
+        if ($('.meContent').hasClass('first')) {
+            $('.first').hide();
+            $('.second').show();
+        }
+        if ($('.meContent').hasClass('second')) {
+            $('.second').hide();
+            $('.third').show();
+        }
+    })
 
 })
 
+
+// if($(this).hasClass('left')){
+//     if(p-1>=0){
+//       p--;
+//     }

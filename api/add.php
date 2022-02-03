@@ -48,6 +48,7 @@ switch($DB->table){
     default:
         $data['text']=$_POST['text']??'';
         $data['sh']=1;
+        $data['ordered']=$_POST['ordered']??'';
     break;
 
 }

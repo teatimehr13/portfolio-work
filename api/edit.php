@@ -34,6 +34,11 @@ foreach($_POST['id'] as $key => $id){
                 $data['sort']=$_POST['sort'][$key];
                 $data['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
             break;
+            case "me":
+                $data['text']=$_POST['text'][$key];
+                $data['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
+                $data['ordered']=$_POST['ordered'][$key];
+            break;
             default:
             //ad,,news,image,mvim
                 $data['text']=isset($_POST['text'])?$_POST['text'][$key]:'';

@@ -16,7 +16,7 @@
 
 <div class="collection col-6 col-md-3 all mb-5 text-center text-light mx-2 <?=$collection['sort'];?>">
         <div class="collection_card mb-3">
-            <a href="*"><img src="../img/<?=$collection['img'];?>" class="img-fluid py-3"></a>
+            <a href="<?=$collection['link_eyes'];?>"><img src="../img/<?=$collection['img'];?>" class="img-fluid py-3"></a>
         </div>
         <h4><?=$collection['text'];?></h4>
         <p><?=$collection['category'];?></p>

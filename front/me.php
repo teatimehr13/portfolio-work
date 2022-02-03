@@ -13,16 +13,23 @@
                     <span>Currently, I was learning computer programing in the Workforce Development Agency, Ministry of
                     Labor. I will be a good programmer and will keep stepping it up.</span> -->
                     <div class="col-md-1 mx-0 px-0 meButton">
-                        <button><i class="fas fa-arrow-right fa-2x"></i></button>
-                        <button><i class="fas fa-arrow-left fa-2x"></i></button>
+                        <button><i class="fas fa-arrow-right fa-2x right"></i></button>
+                        <button><i class="fas fa-arrow-left fa-2x left"></i></button>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 d-flex align-items-center">
                 <!-- <span class="text-white meContent"> Hello this is Henry</span> -->
-                <span class='meContent text-left text-white'>Currently, I was learning computer programing in the
-                    Workforce Development Agency, Ministry of
-                    Labor. I will be a good programmer and will keep stepping it up.</span>
+                <span class='meContent text-left text-white'>
+                    <?php 
+                    $mes = $Me->all(" where `sh`=1");
+                    foreach($mes as $me){
+                        ?>
+                        <div><span class="text-white meContent <?=$me['ordered']; ?>"><?=$me['text']; ?></span></div>
+                    <?php
+                    }
+                    ?>
+                </span>
             </div>
         </div>
     </div>
