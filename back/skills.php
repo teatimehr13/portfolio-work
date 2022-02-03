@@ -4,11 +4,14 @@
         <table width="100%">
             <tbody>
                 <tr class="yel">
-
-                    <td width="30%"><?= $DB->symbol; ?></td>
-                    <td width="50%"><?= $DB->text; ?></td>
+                    <td width="10%">ICON</td>
+                    <td width="10%">位置</td>
+                    <td width="10%">修改ICON</td>
+                    <td width="20%"><?= $DB->class; ?></td>
+                    <td width="40%"><?= $DB->text; ?></td>
                     <td width="10%">顯示</td>
                     <td width="10%">刪除</td>
+                    <td width="10%"></td>
 
                 </tr>
                 <?php
@@ -22,12 +25,39 @@
                 foreach ($rows as $row) {
                     $checked = ($row['sh'] == 1) ? 'checked' : '';
                 ?>
-                    <tr>
+                    <tr style="text-align: center;">
+
+                        <!-- <td>
+                            <input type="text" name="icon[]" style="height:30px" value="<?= $row['icon']; ?>" readonly>
+                        </td> -->
+
                         <td>
-                            <textarea name="symbol[]" style="width:90%;height:60px"><?= $row['symbol']; ?></textarea>
+                            <i class="<?= $row['icon']; ?>" style="font-size: 50px;"></i>
+                        </td>
+
+                        <?php
+                        $options = $row['position'];
+                        ?>
+
+                        <td width="10%">
+                        <select name="position[]" style="height:41px;width:70px">
+                            <option value="">Please Select Option</option>
+                            <option value="left" <?php if($options=="left") echo 'selected="selected"'; ?> >left</option>
+                            <option value="right" <?php if($options=="right") echo 'selected="selected"'; ?> >right</option>
+                            <option value="top" <?php if($options=="top") echo 'selected="selected"'; ?> >top</option>
+                            <option value="bottom" <?php if($options=="bottom") echo 'selected="selected"'; ?> >bottom</option>
+                        </select>
+                        </td>
+
+                        <td>
+                            <input type="text" name="icon[]" style="height:30px; width:130px" value="<?= $row['icon']; ?>">
+                        </td>
+
+                        <td>
+                            <input type="text" name="class[]" style="height:30px ;width:130px" value="<?= $row['class']; ?>" readonly>
                         </td>
                         <td>
-                            <textarea name="text[]" style="width:90%;height:60px"><?= $row['text']; ?></textarea>
+                            <textarea name="text[]" style="width:95%;height:60px"><?= $row['text']; ?></textarea>
                         </td>
                         <td>
                             <input type="checkbox" name="sh[]" value="<?= $row['id']; ?>" <?= $checked; ?>>
@@ -39,6 +69,7 @@
                         </td>
 
                     </tr>
+
                 <?php
                 }
                 ?>

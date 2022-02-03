@@ -3,9 +3,16 @@
 <form action="api/add.php?do=<?= $_GET['table']; ?>" method="post" enctype="multipart/form-data">
     <table>
         <tr>
-            <td>SKILLS符號：</td>
+            <td>ICON：</td>
             <td>
-                <textarea name="symbol" cols="30" rows="5"></textarea>
+                <input type="text" name="icon" cols="30" rows="5">
+            </td>
+        </tr>
+
+        <tr>
+            <td>CLASS：</td>
+            <td>
+                <textarea name="class" cols="30" rows="5"></textarea>
             </td>
         </tr>
         <tr>
@@ -14,6 +21,9 @@
                 <textarea name="text" cols="30" rows="10"></textarea>
             </td>
         </tr>
+
+        <td>
+      
 
     </table>
     <div><input type="submit" value="新增"><input type="reset" value="重置"></div>

@@ -370,9 +370,15 @@ h1{
     color: blue;
 }
 
-#skills .skillsIcon .fa-js-square{
+/* #skills .skillsIcon .fa-js-square{
     margin-top: 290px;
+} */
+
+#skills .skillsIcon .top{
+    margin-bottom: 300px;
 }
+
+
 
 #skills{
     position: relative;

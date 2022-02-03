@@ -29,7 +29,9 @@ switch($DB->table){
     break;
     case "skills":
         $data['text']=$_POST['text'];
-        $data['symbol']=$_POST['symbol']??'';
+        $data['class']=$_POST['class']??'';
+        $data['icon']=$_POST['icon'];
+        $data['position']=$_POST['position'];
         $data['sh']=1;
     break;
     case "collection":

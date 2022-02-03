@@ -47,7 +47,7 @@ class DB{
             $this->title="SKILLS管理";
             $this->button="新增SKILLS";
             $this->text="SKILLS文字介紹";
-            $this->symbol="SKILLS符號";
+            $this->class="CLASS";
           
             break;
             case "mvim";
