@@ -100,6 +100,15 @@ $(document).ready(function () {
     
     })
 
+    
+    $('.others-btn').on('click', function () {
+        $('.all').hide();
+        $('.others').fadeIn();
+
+    
+    
+    })
+
 })
 
 // nav

@@ -3,18 +3,18 @@
         <button class="all-btn btn btn-outline-yellow">ALL</button>
         <button class="f2n-btn all-btn btn btn-outline-yellow">F2N</button>
         <button class="b2n-btn all-btn btn btn-outline-yellow">B2N</button>
-        <button class="ps-btn all-btn btn btn-outline-yellow">PHOTOSHOP</button>
+        <button class="others-btn all-btn btn btn-outline-yellow">OTHERS</button>
 </div>
 
 
 <div class="container-fluid custom-gutters;" style="min-height: 500px;">
 <div class="row px-2 px-md-5 collection-row">
 <?php
-    $collections = $Collection->all(" where `sh`=1 Order By `rank` DESC");
+    $collections = $Collection->all(" where `sh`=1 Order By `rank` ASC");
     foreach($collections as $collection){
 ?>
 
-<div class="collection col-6 col-md-3 all b2n mb-5 text-center text-light mx-2">
+<div class="collection col-6 col-md-3 all mb-5 text-center text-light mx-2 <?=$collection['sort'];?>">
         <div class="collection_card mb-3">
             <a href="*"><img src="../img/<?=$collection['img'];?>" class="img-fluid py-3"></a>
         </div>

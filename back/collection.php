@@ -7,12 +7,12 @@
                     <td width="30%">img</td>
                     <td width="10%">title</td>
                     <td width="10%">category</td>
+                    <td width="10%">sort</td>
                     <td width="10%">icon_eyes</td>
                     <td width="10%">icon_gh</td>
                     <td width="10%">link_eyes</td>
                     <td width="10%">link_gh</td>
                     <td width="2%">rank</td>
-                    <td width="10%">sort</td>
                     <td width="4%">show</td>
                     <td width="4%">del</td>
                     <td></td>
@@ -31,7 +31,20 @@
                         </td>
 
                         <td width="10%">
-                            <input type="text" name="category[]" value="<?= $row['category']; ?>">
+                            <input type="text" name="category[]" value="<?= $row['category']; ?>" style="width:70px">
+                        </td>
+
+                        <?php
+                        $options = $row['sort'];
+                        ?>
+
+                        <td width="10%">
+                        <select name="sort[]" style="height:32px;width:70px">
+                            <option value="">Please Select Option</option>
+                            <option value="b2n" <?php if($options=="b2n") echo 'selected="selected"'; ?> >b2n</option>
+                            <option value="f2n" <?php if($options=="f2n") echo 'selected="selected"'; ?> >f2n</option>
+                            <option value="others" <?php if($options=="others") echo 'selected="selected"'; ?> >others</option>
+                        </select>
                         </td>
 
                         <td width="10%">
@@ -51,22 +64,9 @@
                         </td>
                         
                         <td width="2%">
-                            <input type="text" name="rank[]" value="<?= $row['rank']; ?>">
+                            <input type="text" name="rank[]" value="<?= $row['rank']; ?>" style="width:30px">
                         </td>
-
-                        <?php
-                        $options = $row['sort'];
-                        ?>
-
-                        <td width="10%">
-                        <select name="sort[]">
-                            <option value="">Please Select Option</option>
-                            <option value="b2n" <?php if($options=="b2n") echo 'selected="selected"'; ?> >b2n</option>
-                            <option value="f2n" <?php if($options=="f2n") echo 'selected="selected"'; ?> >f2n</option>
-                            <option value="others" <?php if($options=="others") echo 'selected="selected"'; ?> >others</option>
-                        </select>
-                        </td>
-
+                  
                         <td width="4%">
                             <input type="checkbox" name="sh[]" value="<?= $row['id']; ?>" <?= $checked; ?>>
                         </td>
