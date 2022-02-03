@@ -10,7 +10,7 @@
 <div class="container-fluid custom-gutters;" style="min-height: 500px;">
 <div class="row px-2 px-md-5 collection-row">
 <?php
-    $collections = $Collection->all(" where `sh`=1 Order By `rank`");
+    $collections = $Collection->all(" where `sh`=1 Order By `rank` DESC");
     foreach($collections as $collection){
 ?>
 
@@ -21,9 +21,15 @@
         <h4><?=$collection['text'];?></h4>
         <p><?=$collection['category'];?></p>
                 <div class="collection_atag">
-                    <a href="<?=$collection['link_eyes'];?>"><i
-                            class="<?=$collection['icon_eyes'];?>"></i></a>
-                    <a href="<?=$collection['link_gh'];?>"><i class="<?=$collection['icon_gh'];?>"></i></a>
+                    <a href="<?=$collection['link_eyes'];?>"><i class="<?=$collection['icon_eyes'];?>"></i></a>
+                    <?php if(empty($collection['icon_gh'])){
+                        echo "";
+                        }else{?>
+                     <a href="<?=$collection['link_gh'];?>"><i class="<?=$collection['icon_gh'];?>"></i></a>
+                        <?php
+                     } 
+                     ?>
+                        
                 </div>
             </div>
     <?php } ?>

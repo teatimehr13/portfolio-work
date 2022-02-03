@@ -40,6 +40,7 @@ switch($DB->table){
         $data['link_eyes']=$_POST['link_eyes']??'';
         $data['link_gh']=$_POST['link_gh']??'';
         $data['rank']=$_POST['rank']??'';
+        $data['sort']=$_POST['sort']??'';
         $data['sh']=1;
     break;
     default:

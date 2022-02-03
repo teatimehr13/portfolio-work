@@ -31,6 +31,7 @@ foreach($_POST['id'] as $key => $id){
                 $data['link_eyes']=$_POST['link_eyes'][$key];
                 $data['link_gh']=$_POST['link_gh'][$key];
                 $data['rank']=$_POST['rank'][$key];
+                $data['sort']=$_POST['sort'][$key];
                 $data['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
             break;
             default:
