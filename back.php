@@ -26,19 +26,21 @@ if(!isset($_SESSION['login'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">-->
 </head>
 <style>
-.btn-mocha {
+.btn-purple {
     color: #fff;
-    background-color: #a5a58d;
-    border-color: #a5a58d;
+    background-color: #c89fa3;
+    border-color: #c89fa3;
 }
-
-.btn-mocha:hover,
-.btn-mocha:focus,
-.btn-mocha:active:hover {
+.btn-purple:hover,
+.btn-purple:focus,
+.btn-purple:active:hover {
     color: #fff;
-    background-color: #b7b7a4;
-    border-color: #b7b7a4;
-        }
+    background-color:  #b5838d;
+    border-color: #b5838d;
+}
+a:hover{
+    text-decoration: none;
+}
 </style>
 
 <body>
@@ -57,27 +59,27 @@ if(!isset($_SESSION['login'])){
                 <div id="menuput" class="border border-secondary">
                     <!--主選單放此-->
                     <a href="?do=title">
-                        <button type="button" class="btn btn-mocha btn-block my-2">HEADER</button>
+                        <button type="button" class="btn btn-purple btn-block my-2">HEADER</button>
                     </a>
 
                     <a href="?do=me">
-                        <button type="button" class="btn btn-mocha btn-block my-2">ME</button>
+                        <button type="button" class="btn btn-purple btn-block my-2">ME</button>
                     </a>
 
                     <a href="?do=collection">
-                        <button type="button" class="btn btn-mocha btn-block my-2">COLLECTION</button>
+                        <button type="button" class="btn btn-purple btn-block my-2">COLLECTION</button>
                     </a>
 
                     <a href="?do=skills">
-                        <button type="button" class="btn btn-mocha btn-block my-2">SKILLS</button>
+                        <button type="button" class="btn btn-purple btn-block my-2">SKILLS</button>
                     </a>
 
                     <a href="?do=bottom">
-                        <button type="button" class="btn btn-mocha btn-block my-2">FOOTER</button>
+                        <button type="button" class="btn btn-purple btn-block my-2">FOOTER</button>
                     </a>
 
                     <a href="?do=admin">
-                        <button type="button" class="btn btn-mocha btn-block my-2">USERS</button>
+                        <button type="button" class="btn btn-purple btn-block my-2">USERS</button>
                     </a>
 
 
