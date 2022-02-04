@@ -19,7 +19,7 @@
                     <tr>
                         <td width="20%">
                             <?php if (empty($row['img'])) {
-                                echo "<img src='https://fakeimg.pl/120x100/?text=No Img'>";
+                                echo "<img src='https://fakeimg.pl/120x100/?text=TEXT ONLY'>";
                             } else { ?>
                                 <img src="./img/<?= $row['img']; ?>" style="width:120px;height:100px">
                             <?php
