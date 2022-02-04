@@ -15,10 +15,6 @@ include_once "base.php";
     <link rel="stylesheet" href="./scss/bootstrap.css">
     <link rel="stylesheet" href="./style2 copy.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <style>
-
-    </style>
 </head>
 <!-- <body > -->
 

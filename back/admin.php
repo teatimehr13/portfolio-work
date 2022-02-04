@@ -5,8 +5,8 @@
             <tbody>
                 <tr class="yel">
 
-                    <td width="40%"><?=$DB->header;?></td>
-                    <td width="40%"><?=$DB->append;?></td>
+                    <td width="20%"><?=$DB->header;?></td>
+                    <td width="20%"><?=$DB->append;?></td>
                     <td width="10%">刪除</td>
 
                 </tr>
@@ -17,11 +17,11 @@
                 ?>
                 <tr>
 
-                    <td>
-                        <input type="text" name="acc[]" value="<?=$row['acc'];?>">
+                    <td width="20%">
+                        <input type="text" name="acc[]" value="<?=$row['acc'];?>" style="width: 90%;">
                     </td>
-                    <td>
-                        <input type="password" name="pw[]" value="<?=$row['pw'];?>">
+                    <td width="20%">
+                        <input type="password" name="pw[]" value="<?=$row['pw'];?>" style="width: 90%;">
                     </td>
 
                     <td>

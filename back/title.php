@@ -1,4 +1,4 @@
-<div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
+<div style="width:100%; height:87%; margin:auto; overflow:auto;">
     <p class="t cent botli"><?=$DB->title;?></p>
     <form method="post"  action="api/edit.php?do=<?=$DB->table;?>">
         <table width="100%">

@@ -36,9 +36,9 @@ body
 #main
 {
 	width:1024px;
-	height:768px;
+	/* height:768px; */
 	margin:10px auto 10px auto;
-	border:#EE7728 1px solid;
+	border:#ccc 2px solid ;
 	position:relative;
 }
 .ti
@@ -159,7 +159,7 @@ input:focus,button:focus
 }
 .yel td
 {
-	background:#F3DA49;
+	background:#c9ada7;
 	text-align:center;
 }
 .trce td
