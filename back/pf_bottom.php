@@ -1,12 +1,12 @@
 <div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
     <p class="t cent botli">頁尾版權資料管理</p>
     <form method="post"  action="./api/bottom.php">
-        <table width="50%" style="margin:auto">
+        <table width="100%" style="margin:auto">
             <tbody>
                 <tr class="yel">
-                    <td width="50%">頁尾版權資料:</td>
-                    <td width="50%">
-                        <input type="text" name="bottom" value="<?=$Bottom->find(1)['bottom'];?>">
+                    <td width="20%">頁尾版權資料:</td>
+                    <td width="80%">
+                        <input style="width:100%" type="text" name="bottom" value="<?=$Bottom->find(1)['bottom'];?>">
                     </td>
                 </tr>
             </tbody>

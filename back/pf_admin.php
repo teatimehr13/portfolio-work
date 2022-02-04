@@ -1,40 +1,35 @@
-<div style="width:100%; height:87%; margin:auto; overflow:auto;">
+<div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
     <p class="t cent botli"><?=$DB->title;?></p>
     <form method="post"  action="api/edit.php?do=<?=$DB->table;?>">
         <table width="100%">
             <tbody>
                 <tr class="yel">
-                    <td width="45%">圖片</td>
-                    <td width="23%">文字</td>
-                    <td width="7%">顯示</td>
-                    <td width="7%">刪除</td>
-                    <td></td>
+
+                    <td width="20%"><?=$DB->header;?></td>
+                    <td width="20%"><?=$DB->append;?></td>
+                    <td width="10%">刪除</td>
+
                 </tr>
                 <?php
                 $rows=$DB->all();
                 foreach($rows as $row){
-                    $checked=($row['sh']==1)?'checked':'';
+                   
                 ?>
-                <tr>
-                    <td width="45%">
-                        <img src="./img/<?=$row['img'];?>" style="width:300px;height:30px">
+                <tr class="text-center">
+
+                    <td width="20%">
+                        <input type="text" name="acc[]" value="<?=$row['acc'];?>" style="width: 90%;">
                     </td>
-                    <td width="23%">
-                        <input type="text" name="text[]" value="<?=$row['text'];?>">
+                    <td width="20%">
+                        <input type="password" name="pw[]" value="<?=$row['pw'];?>" style="width: 90%;">
                     </td>
-                    <td width="7%">
-                        <input type="radio" name="sh" value="<?=$row['id'];?>" <?=$checked;?>>
-                    </td>
-                    <td width="7%">
+
+                    <td>
                         <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
 
+                        <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                     </td>
-                    <td>
-                    <input type="hidden" name="id[]" value="<?=$row['id'];?>">
-                    <input type="button"
-                            onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/upload.php?do=<?=$DB->table;?>&id=<?=$row['id'];?>&#39;)" 
-                              value="更新圖片">
-                    </td>
+
                 </tr>
                 <?php
                 }

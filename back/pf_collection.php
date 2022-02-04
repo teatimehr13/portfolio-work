@@ -22,7 +22,7 @@
                 foreach ($rows as $row) {
                     $checked = ($row['sh'] == 1) ? 'checked' : '';
                 ?>
-                    <tr>
+                    <tr class="text-center">
                         <td width="30%">
                             <img src="./img/<?= $row['img']; ?>" style="width:100px;height:80px">
                         </td>

@@ -44,10 +44,10 @@ if (!isset($_SESSION['login'])) {
     <?php include_once "back/ajaxButton.php"; ?>
 
     <div id="main">
-        <?php include "back/header.php"; ?>
+        <?php include "back/pf_header.php"; ?>
         <div id="ms">
 
-            <?php include_once "back/sideNav.php"; ?>
+            <?php include_once "back/pf_sideNav.php"; ?>
 
             <div class="di" style="height:540px; border:#999 1px solid; width:76.5%; margin:2px 0px 0px 0px; float:left; position:relative; left:20px;">
                 <!--正中央-->
@@ -68,7 +68,7 @@ if (!isset($_SESSION['login'])) {
                     include $file;
                 } else {
                     //echo "檔案不存在";
-                    include "./back/title.php";
+                    include "./back/pf_title.php";
                 }
 
                 ?>
@@ -76,7 +76,7 @@ if (!isset($_SESSION['login'])) {
 
         </div>
         <div style="clear:both;"></div>
-        <?php include_once "./back/footer.php" ?>
+        <?php include_once "./back/pf_footer.php" ?>
     </div>
 
 </body>

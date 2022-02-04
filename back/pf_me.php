@@ -16,7 +16,7 @@
                 foreach ($rows as $row) {
                     $checked = ($row['sh'] == 1) ? 'checked' : '';
                 ?>
-                    <tr>
+                    <tr class="text-center">
                         <td width="20%">
                             <?php if (empty($row['img'])) {
                                 echo "<img src='https://fakeimg.pl/120x100/?text=TEXT ONLY'>";

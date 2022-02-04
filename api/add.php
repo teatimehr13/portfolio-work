@@ -13,28 +13,28 @@ if(!empty($_FILES['img']['tmp_name'])){
 
 
 switch($DB->table){
-    case "title":
+    case "pf_title":
         $data['text']=$_POST['text'];
         $data['sh']=0;
     break;
-    case "admin":
+    case "pf_admin":
         $data['acc']=$_POST['acc'];
         $data['pw']=$_POST['pw'];
     break;
-    case "menu":
+    case "pf_menu":
         $data['name']=$_POST['name'];
         $data['href']=$_POST['href'];
         $data['sh']=1;
         $data['parent']=0;
     break;
-    case "skills":
+    case "pf_skills":
         $data['text']=$_POST['text'];
         $data['class']=$_POST['class']??'';
         $data['icon']=$_POST['icon'];
         $data['position']=$_POST['position'];
         $data['sh']=1;
     break;
-    case "collection":
+    case "pf_collection":
         $data['text']=$_POST['text'];
         $data['category']=$_POST['category'];
         $data['icon_eyes']=$_POST['icon_eyes']??'';

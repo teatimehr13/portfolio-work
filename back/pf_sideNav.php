@@ -4,27 +4,27 @@
 
                     <h5 class="text-center my-3 t">主選單區</h5>
 
-                    <a href="?do=title">
+                    <a href="?do=pf_title">
                         <button type="button" class="btn btn-purple btn-block my-2">HEADER</button>
                     </a>
 
-                    <a href="?do=me">
+                    <a href="?do=pf_me">
                         <button type="button" class="btn btn-purple btn-block my-2">ME</button>
                     </a>
 
-                    <a href="?do=collection">
+                    <a href="?do=pf_collection">
                         <button type="button" class="btn btn-purple btn-block my-2">COLLECTION</button>
                     </a>
 
-                    <a href="?do=skills">
+                    <a href="?do=pf_skills">
                         <button type="button" class="btn btn-purple btn-block my-2">SKILLS</button>
                     </a>
 
-                    <a href="?do=bottom">
+                    <a href="?do=pf_bottom">
                         <button type="button" class="btn btn-purple btn-block my-2">FOOTER</button>
                     </a>
 
-                    <a href="?do=admin">
+                    <a href="?do=pf_admin">
                         <button type="button" class="btn btn-purple btn-block my-2">USERS</button>
                     </a>
 
