@@ -1,4 +1,4 @@
-<div class="homeCover">
+<div class="homeCover" id="homeCover">
         <ul class="fly-in-text hidden">
             <li>W</li>
             <li>E</li>
