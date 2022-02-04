@@ -179,37 +179,33 @@ $(document).ready(function () {
 
     //me
 
-    $('.first').show();
-    // $('.left').on('click', function () {
-    //     if ($('.meContent').hasClass('first')) {
-    //         $('.first').show();
-    //     }
-    //     if ($('.meContent').hasClass('second')) {
-    //         $('.second').hide();
-    //         $('.first').show();
-    //     }
-    //     if ($('.meContent').hasClass('third first')) {
-    //         $('.third').hide();
-    //         $('.second').show();
-    //     }
-     
-    // })
+    $('.meContent').eq(0).show()
+    let p = 0; //設定從0開始
+    let all = $('.meContent').length;  //找到me文字有幾個 ; 4個
+    // console.log(all);
 
     $('.right').on('click', function () {
-        if ($('.meContent').hasClass('first')) {
-            $('.first').hide();
-            $('.second').show();
+
+        if ((p + 2) <= all) {
+            p++;
         }
-        if ($('.meContent').hasClass('second')) {
-            $('.second').hide();
-            $('.third').show();
+        $(".meContent").hide()
+        $(".meContent").eq(p).fadeIn(500)
+    }
+    )
+
+
+    $('.left').on('click', function () {
+
+        if ((p -1 ) >= 0) {
+            p--;
         }
-    })
+        $(".meContent").hide()
+        $(".meContent").eq(p).fadeIn(500)
+    }
+    )
 
 })
 
 
-// if($(this).hasClass('left')){
-//     if(p-1>=0){
-//       p--;
-//     }
+
