@@ -29,41 +29,6 @@ $(function () {
 
 });
 
-//collection
-
-// $(document).ready(function () {
-//     const navbar = document.getElementById('navbar');
-//     // const navbar = $('#navbar');
-//     const scrollReport = document.getElementById('scrollReport');
-//     // const scrollReport = $('#scrollReport');
-//     console.log('scrollReport', scrollReport);
-
-
-
-//     window.addEventListener('scroll', function () {
-//         // console.log('window',window);
-//         // const y = Math.round(window.scrollY + navbar.height());
-//         const y = Math.round(window.scrollY + navbar.offsetHeight);
-//         // console.log('navbar',navbar)
-//         scrollReport.innerText = `目前所在的位置${y}`;
-//         console.log(`目前所在的位置${y}`);
-
-
-//     const collection = document.getElementById('collection');
-//     const top = collection.offsetTop;
-//     //section bottom
-//     const bottom = top + collection.offsetHeight; 
-
-//     if(y > top && y < bottom){
-//          $('.all').each(function(index) {
-//          $(this).fadeIn(500);
-//         });
-//     }
-
-
-//     $(document).off('scroll'); 
-// })
-// })
 $(document).ready(function () {
     // $('.all').delay(500).fadeIn();
     // $('.all').each(function(index) {
@@ -205,9 +170,25 @@ $(document).ready(function () {
     }
     )
 
+    window.addEventListener('scroll', function () {
+        // console.log('window',window);
+        const y = Math.round(window.scrollY + navbar.offsetHeight);
+        // console.log('navbar',navbar)
+        scrollReport.innerText = `目前所在的位置${y}`;
+        // console.log(`目前所在的位置${y}`);
+
+        const topp = $('#introduceME').offset().top;
+        console.log(topp);
+        const bottom = topp + $('#introduceME').height();
+        // console.log(bottom);
+        if (y > topp) {
+            $('#menuBtn').addClass('text-white')
+			
+        }else{
+            $('#menuBtn').removeClass('text-white')
+        }
+        
+    })
 })
-
-
-
 
 

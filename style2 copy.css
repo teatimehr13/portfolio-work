@@ -461,7 +461,15 @@ h1{
 
 }
 
-/* #scrollReport {
+.collection-row{
+    justify-content: center;
+}
+
+.collection-row-left{
+    margin-left: 50px;
+}
+
+#scrollReport {
     color: white;
     background: black;
     padding: 10px 10px;
@@ -472,12 +480,4 @@ h1{
     bottom: 15px;
     z-index: 100;
     box-shadow: 0 4px 6px rgba(0,0,0,.5);
-} */
-
-.collection-row{
-    justify-content: center;
-}
-
-.collection-row-left{
-    margin-left: 50px;
 }
