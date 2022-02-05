@@ -62,16 +62,11 @@ $(document).ready(function () {
         //     $(this).delay(200 * index).fadeIn();
         // })
 
-
     })
-
 
     $('.others-btn').on('click', function () {
         $('.all').hide();
         $('.others').fadeIn();
-
-
-
     })
 
 })
@@ -108,9 +103,10 @@ $(document).ready(function () {
             $('.fullCover').hide();
             $(".body").css('overflow', '');
             // $(".navBody").css('overflow', '');
-
         }
     })
+
+
 
     //skills
 
@@ -169,6 +165,8 @@ $(document).ready(function () {
         $(".meContent").eq(p).fadeIn(500)
     }
     )
+
+    //讓menuBtn到某個座標後變色
 
     window.addEventListener('scroll', function () {
         // console.log('window',window);

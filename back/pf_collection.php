@@ -5,16 +5,16 @@
     <div class="cent">
         <form method="post" action="api/edit.php?do=<?= $DB->table; ?>">
 
-<input class="text-center my-2" type="text" name="title[]" style="height:30px; width:130px ; background:white" 
-<?php if(empty($Collection->find(['sh' => '1'])['title'])){
+    <input class="text-center my-2" type="text" name="title[]" style="height:30px; width:130px ; background:white" 
+    <?php if(empty($Collection->find(['sh' => '1'])['title'])){
                     echo "";
     }else{
-?>
+    ?>
     value="<?= $Collection->find(['sh' => '1'])['title']; ?>" > 管理
     <?php
     } 
     ?>
-
+    
 </div>
 
         <table width="100%">

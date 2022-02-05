@@ -6,7 +6,7 @@
             <a href="#"><i class="fab fa-github mx-2"></i></a>
             <a href="#"><i class="fab fa-codepen mx-2"></i></a>
         </div>
-        <!-- <div id="scrollReport">目前滑動狀態</div> -->
+    
         <span class="footer" style="text-transform:uppercase;"><?=$Bottom->find(1)['bottom'];?></span>
 
     </div>
