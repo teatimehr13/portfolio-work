@@ -1,6 +1,23 @@
 <div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
-    <p class="t cent botli"><?= $DB->title; ?></p>
+    <!-- <p class="t cent botli"><?= $DB->title; ?></p> -->
+
     <form method="post" action="api/edit.php?do=<?= $DB->table; ?>">
+    
+    <div class="cent">
+
+<input class="text-center my-2" type="text" name="title[]" style="height:30px; width:130px ; background:white" 
+<?php if(empty($Me->find(['sh' => '1'])['title'])){
+                    echo "";
+    }else{
+?>
+    value="<?= $Me->find(['sh' => '1'])['title']; ?>" > 管理
+    <?php
+    } 
+    ?>
+
+</div>
+
+
         <table width="100%">
             <tbody>
                 <tr class="yel">

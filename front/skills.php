@@ -1,5 +1,16 @@
 <div class="container-fluid text-center" id="skills" style="padding: 80px 0px;">
-    <h1 class="mb-5 text-golden">SKILLS</h1>
+    <h1 class="mb-5 text-golden">
+        
+    <?php if(empty($Skills->find(['sh' => '1'])['title'])){
+                        echo "";
+        }else{
+    ?>
+        <?= $Skills->find(['sh' => '1'])['title']; ?>
+        <?php
+        } 
+        ?>
+
+</h1>
     <div class="row skillsIcon mx-5 justify-content-between">
 
         <div class="col-md-4 align-self-md-center">

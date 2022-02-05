@@ -1,7 +1,23 @@
 <div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
-    <p class="t cent botli"><?= $DB->title; ?></p>
     <form method="post" action="api/edit.php?do=<?= $DB->table; ?>">
-        <table width="100%">
+    <!-- <p class="t cent botli"><?= $DB->title; ?></p> -->
+
+    <div class="cent">
+
+    <input class="text-center my-2" type="text" name="title[]" style="height:30px; width:130px ; background:white" 
+  <?php if(empty($Skills->find(['sh' => '1'])['title'])){
+                        echo "";
+        }else{
+    ?>
+        value="<?= $Skills->find(['sh' => '1'])['title']; ?>" > 管理
+        <?php
+        } 
+        ?>
+
+    </div>
+
+
+    <table width="100%">
             <tbody>
                 <tr class="yel">
                     <td width="10%">ICON</td>
@@ -40,13 +56,13 @@
                         ?>
 
                         <td width="10%">
-                        <select name="position[]" style="height:41px;width:70px">
-                            <option value="">Please Select Option</option>
-                            <option value="left" <?php if($options=="left") echo 'selected="selected"'; ?> >left</option>
-                            <option value="right" <?php if($options=="right") echo 'selected="selected"'; ?> >right</option>
-                            <option value="top" <?php if($options=="top") echo 'selected="selected"'; ?> >top</option>
-                            <option value="bottom" <?php if($options=="bottom") echo 'selected="selected"'; ?> >bottom</option>
-                        </select>
+                            <select name="position[]" style="height:41px;width:70px">
+                                <option value="">Please Select Option</option>
+                                <option value="left" <?php if ($options == "left") echo 'selected="selected"'; ?>>left</option>
+                                <option value="right" <?php if ($options == "right") echo 'selected="selected"'; ?>>right</option>
+                                <option value="top" <?php if ($options == "top") echo 'selected="selected"'; ?>>top</option>
+                                <option value="bottom" <?php if ($options == "bottom") echo 'selected="selected"'; ?>>bottom</option>
+                            </select>
                         </td>
 
                         <td>

@@ -1,5 +1,16 @@
 <div class="text-center" id="collection" style="padding: 80px 0px ;">
-        <h1 class="mb-5 text-golden">COLLECTION</h1>
+
+        <h1 class="mb-5 text-golden">
+        <?php if(empty($Collection->find(['sh' => '1'])['title'])){
+                        echo "";
+        }else{
+    ?>
+        <?= $Collection->find(['sh' => '1'])['title']; ?>
+        <?php
+        } 
+        ?>
+        </h1>
+        
         <button class="all-btn btn btn-outline-yellow">ALL</button>
         <button class="f2n-btn all-btn btn btn-outline-yellow">F2N</button>
         <button class="b2n-btn all-btn btn btn-outline-yellow">B2N</button>

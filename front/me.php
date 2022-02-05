@@ -1,10 +1,24 @@
 <div class="container-fluid text-center" style="padding: 80px 0px; " id="introduceME">
-        <h1 class="text-golden" style="margin-bottom: 72px;">ME</h1>
+
+    <h1 class="text-golden" style="margin-bottom: 72px;">
+    <?php if(empty($Me->find(['sh' => '1'])['title'])){
+                        echo "";
+        }else{
+    ?>
+        <?= $Me->find(['sh' => '1'])['title']; ?>
+        <?php
+        } 
+        ?>
+    
+    
+    </h1>
+
+
         <div class="row">
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-12">
-                        <img src="./img/FB200BBD-D5D0-457B-A702-A53D37533EA6.jpg" class="img-fluid">
+                        <img src=" ../img/<?= $Me->find(['sh' => '1'])['img']; ?>" class="img-fluid">
                     </div>
                     <!-- <span> Hello this is Henry</span>
                     <span>I graduated from the Chihlee University of Technology with a major in International trade.</span>

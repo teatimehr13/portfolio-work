@@ -32,20 +32,23 @@ foreach($_POST['id'] as $key => $id){
                 $data['link_gh']=$_POST['link_gh'][$key];
                 $data['rank']=$_POST['rank'][$key];
                 $data['sort']=$_POST['sort'][$key];
+                $data['title']=$_POST['title'][$key];
                 $data['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
             break;
             case "pf_me":
                 $data['text']=$_POST['text'][$key];
                 $data['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
                 $data['ordered']=$_POST['ordered'][$key];
+                $data['title']=$_POST['title'][$key];
             break;
-            default:
-            //ad,,news,image,mvim
+                default:
+                //ad,,news,image,mvim
                 $data['text']=isset($_POST['text'])?$_POST['text'][$key]:'';
                 $data['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
                 $data['class']=$_POST['class'][$key];
                 $data['icon']=$_POST['icon'][$key];
                 $data['position']=$_POST['position'][$key];
+                $data['title']=$_POST['title'][$key];
             break;
 
         }
