@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2022-02-04 18:12:52
+-- 產生時間： 2022-02-05 13:14:33
 -- 伺服器版本： 10.4.22-MariaDB
 -- PHP 版本： 7.4.26
 
@@ -30,15 +30,17 @@ SET time_zone = "+00:00";
 CREATE TABLE `pf_admin` (
   `id` int(11) UNSIGNED NOT NULL,
   `acc` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `pw` text COLLATE utf8mb4_unicode_520_ci NOT NULL
+  `pw` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `img` varchar(64) COLLATE utf8mb4_unicode_520_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
 -- 傾印資料表的資料 `pf_admin`
 --
 
-INSERT INTO `pf_admin` (`id`, `acc`, `pw`) VALUES
-(1, 'sss', '1234');
+INSERT INTO `pf_admin` (`id`, `acc`, `pw`, `img`) VALUES
+(1, 'sss2', '1234', ''),
+(3, 'ff', 'ff', '');
 
 -- --------------------------------------------------------
 
@@ -67,6 +69,7 @@ INSERT INTO `pf_bottom` (`id`, `bottom`) VALUES
 
 CREATE TABLE `pf_collection` (
   `id` int(11) UNSIGNED NOT NULL,
+  `title` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `img` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `text` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `category` varchar(32) COLLATE utf8mb4_unicode_520_ci NOT NULL,
@@ -83,11 +86,11 @@ CREATE TABLE `pf_collection` (
 -- 傾印資料表的資料 `pf_collection`
 --
 
-INSERT INTO `pf_collection` (`id`, `img`, `text`, `category`, `icon_eyes`, `icon_gh`, `link_eyes`, `link_gh`, `sh`, `sort`, `rank`) VALUES
-(7, 'cal01.png', 'Calendar', 'PHP', 'far fa-eye', 'fab fa-github', 'http://220.128.133.15/s1100410/calendarr/index.php?year=2021&month=01', 'https://github.com/teatimehr13/calendar', 1, 'b2n', 2),
-(8, 'sv01-1.png', 'Polling Website', 'PHP', 'far fa-eye', 'fab fa-github', 'http://220.128.133.15/s1100410/hello/', 'https://github.com/teatimehr13/survey', 1, 'b2n', 3),
-(11, 'tc01.jpg', 'Calendar', 'PHOTOSHOP', 'far fa-eye', '', 'img/tiger calendar 01.jpg', '', 1, 'others', 4),
-(12, 'pm01.png', 'Bannber', 'PHOTOSHOP', 'far fa-eye', '', 'img/promo01.png', '', 1, 'others', 5);
+INSERT INTO `pf_collection` (`id`, `title`, `img`, `text`, `category`, `icon_eyes`, `icon_gh`, `link_eyes`, `link_gh`, `sh`, `sort`, `rank`) VALUES
+(7, ' COLLECTION', 'cal01.png', 'Calendar', 'PHP', 'far fa-eye', 'fab fa-github', 'http://220.128.133.15/s1100410/calendarr/index.php?year=2021&month=01', 'https://github.com/teatimehr13/calendar', 1, 'b2n', 2),
+(8, '', 'sv01-1.png', 'Polling Website', 'PHP', 'far fa-eye', 'fab fa-github', 'http://220.128.133.15/s1100410/hello/', 'https://github.com/teatimehr13/survey', 1, 'b2n', 3),
+(11, '', 'tc01.jpg', 'Calendar', 'PHOTOSHOP', 'far fa-eye', '', 'img/tiger calendar 01.jpg', '', 1, 'others', 4),
+(12, '', 'pm01.png', 'Bannber', 'PHOTOSHOP', 'far fa-eye', '', 'img/promo01.png', '', 1, 'others', 5);
 
 -- --------------------------------------------------------
 
@@ -97,6 +100,7 @@ INSERT INTO `pf_collection` (`id`, `img`, `text`, `category`, `icon_eyes`, `icon
 
 CREATE TABLE `pf_me` (
   `id` int(11) UNSIGNED NOT NULL,
+  `title` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `img` text COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
   `text` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `ordered` varchar(10) COLLATE utf8mb4_unicode_520_ci NOT NULL,
@@ -107,11 +111,11 @@ CREATE TABLE `pf_me` (
 -- 傾印資料表的資料 `pf_me`
 --
 
-INSERT INTO `pf_me` (`id`, `img`, `text`, `ordered`, `sh`) VALUES
-(4, 'FB200BBD-D5D0-457B-A702-A53D37533EA6.jpg', 'Hello this is Henry.\r\n<br><br>\r\nI graduated from the Chihlee University of Technology with a major in International trade.', '1', 1),
-(6, '', 'I am interested in connecting various people and products from different corners of the globe.', '2', 1),
-(7, '', 'Currently, I was learning computer programing in the Workforce Development Agency, Ministry of\r\n                    Labor.<br> I will be a good programmer and will keep stepping it up.', '3', 1),
-(12, '', 'Thank you for your watching ! <br>\r\nIf you interested in  my collection, please contact me!', '4', 1);
+INSERT INTO `pf_me` (`id`, `title`, `img`, `text`, `ordered`, `sh`) VALUES
+(4, 'ME', 'FB200BBD-D5D0-457B-A702-A53D37533EA6.jpg', 'Hello this is Henry.\r\n<br><br>\r\nI graduated from the Chihlee University of Technology with a major in International trade.', '1', 1),
+(6, '', '', 'I am interested in connecting various people and products from different corners of the globe.', '2', 1),
+(7, '', '', 'Currently, I was learning computer programing in the Workforce Development Agency, Ministry of\r\n                    Labor.<br> I will be a good programmer and will keep stepping it up.', '3', 1),
+(12, '', '', 'Thank you for your watching ! <br>\r\nIf you interested in  my collection, please contact me!', '4', 1);
 
 -- --------------------------------------------------------
 
@@ -122,6 +126,7 @@ INSERT INTO `pf_me` (`id`, `img`, `text`, `ordered`, `sh`) VALUES
 CREATE TABLE `pf_skills` (
   `id` int(11) UNSIGNED NOT NULL,
   `img` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `title` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `icon` varchar(132) COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `text` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `class` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
@@ -133,11 +138,12 @@ CREATE TABLE `pf_skills` (
 -- 傾印資料表的資料 `pf_skills`
 --
 
-INSERT INTO `pf_skills` (`id`, `img`, `icon`, `text`, `class`, `position`, `sh`) VALUES
-(14, '', 'fab fa-php', '使用PHP串接SQL可將資料放在伺服器端進行驗證或讀取，避免資料的暴露或被攻擊。', 'phpContent', 'top', 1),
-(15, '', 'fab fa-js-square', 'JS在商業上可搭配GTM設定滑鼠停留事件(onmouseover)追蹤，紀錄使用者停留在特定網頁時間長度;或使用滑鼠點擊事件紀錄商品被點擊的次數。', 'jsContent', 'bottom', 1),
-(16, '', 'fab fa-html5', 'HTML5支援影音檔的播放及新的網頁區塊標籤，讓電腦更容易辨認網頁架構藉此提高搜尋引擎排名。', 'htmlContent', 'left', 1),
-(17, '', 'fab fa-css3-alt', 'CSS3新增了文字陰影、盒子模型、漸變及偽元素等讓網頁呈現方式更加多樣化的新選擇器。', 'cssContent', 'right', 1);
+INSERT INTO `pf_skills` (`id`, `img`, `title`, `icon`, `text`, `class`, `position`, `sh`) VALUES
+(14, '', 'SKILLS', 'fab fa-php', '使用PHP串接SQL可將資料放在伺服器端進行驗證或讀取，避免資料的暴露或被攻擊。', 'phpContent', 'top', 1),
+(15, '', '', 'fab fa-js-square', 'JS在商業上可搭配GTM設定滑鼠停留事件(onmouseover)追蹤，紀錄使用者停留在特定網頁時間長度;或使用滑鼠點擊事件紀錄商品被點擊的次數。', 'jsContent', 'bottom', 1),
+(16, '', '', 'fab fa-html5', 'HTML5支援影音檔的播放及新的網頁區塊標籤，讓電腦更容易辨認網頁架構藉此提高搜尋引擎排名。', 'htmlContent', 'left', 1),
+(17, '', '', 'fab fa-css3-alt', 'CSS3新增了文字陰影、盒子模型、漸變及偽元素等讓網頁呈現方式更加多樣化的新選擇器。', 'cssContent', 'right', 1),
+(25, 'c', '', 'c', 'c', 'c', '', 0);
 
 -- --------------------------------------------------------
 
@@ -158,7 +164,7 @@ CREATE TABLE `pf_title` (
 
 INSERT INTO `pf_title` (`id`, `img`, `text`, `sh`) VALUES
 (1, '01B04.jpg', '', 0),
-(2, 'henry_logo.png', 'ttttt', 1);
+(2, 'henry_logo.png', 'tt', 1);
 
 -- --------------------------------------------------------
 
@@ -176,7 +182,7 @@ CREATE TABLE `pf_total` (
 --
 
 INSERT INTO `pf_total` (`id`, `total`) VALUES
-(1, 1);
+(1, 2);
 
 --
 -- 已傾印資料表的索引
@@ -232,7 +238,7 @@ ALTER TABLE `pf_total`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `pf_admin`
 --
 ALTER TABLE `pf_admin`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `pf_bottom`
@@ -244,25 +250,25 @@ ALTER TABLE `pf_bottom`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `pf_collection`
 --
 ALTER TABLE `pf_collection`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `pf_me`
 --
 ALTER TABLE `pf_me`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `pf_skills`
 --
 ALTER TABLE `pf_skills`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `pf_title`
 --
 ALTER TABLE `pf_title`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `pf_total`

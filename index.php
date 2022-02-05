@@ -30,7 +30,7 @@ include_once "base.php";
 
     <div class="fullCover" style="z-index: 2;"></div>
 
-    <!-- <div id="scrollReport">目前滑動狀態</div> -->
+    <div id="scrollReport" style="display: none;">目前滑動狀態</div>
 
 
 
