@@ -1,11 +1,11 @@
 <div class="container-fluid text-center" style="padding: 80px 0px; " id="introduceME">
 
     <h1 class="text-golden" style="margin-bottom: 72px;">
-    <?php if(empty($Me->find(['sh' => '1'])['title'])){
+    <?php if(empty($Me->find(['sh' => '1'])['titles'])){
                         echo "";
         }else{
     ?>
-        <?= $Me->find(['sh' => '1'])['title']; ?>
+        <?= $Me->find(['sh' => '1'])['titles']; ?>
         <?php
         } 
         ?>

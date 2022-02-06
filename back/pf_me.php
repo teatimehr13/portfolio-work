@@ -5,12 +5,12 @@
     
     <div class="cent">
 
-<input class="text-center my-2" type="text" name="title[]" style="height:30px; width:130px ; background:white" 
-<?php if(empty($Me->find(['sh' => '1'])['title'])){
+<input class="text-center my-2" type="text" name="titles[]" style="height:30px; width:130px ; background:white" 
+<?php if(empty($Me->find(['sh' => '1'])['titles'])){
                     echo "";
     }else{
 ?>
-    value="<?= $Me->find(['sh' => '1'])['title']; ?>" > 管理
+    value="<?= $Me->find(['sh' => '1'])['titles']; ?>" > 管理
     <?php
     } 
     ?>
