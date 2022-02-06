@@ -3,12 +3,12 @@ date_default_timezone_set("Asia/Taipei");
 session_start();
 
 class DB{
-    // protected $dsn="mysql:host=localhost;charset=utf8;dbname=s1100410";
-    // protected $user="s1100410";
-    // protected $pw='s1100410';
-    protected $dsn="mysql:host=localhost;charset=utf8;dbname=portfolio";
-    protected $user="root";
-    protected $pw='';
+    protected $dsn="mysql:host=localhost;charset=utf8;dbname=s1100410";
+    protected $user="s1100410";
+    protected $pw='s1100410';
+    // protected $dsn="mysql:host=localhost;charset=utf8;dbname=portfolio";
+    // protected $user="root";
+    // protected $pw='';
     protected $pdo;
     public $table;
     public $title;
