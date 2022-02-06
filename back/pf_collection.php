@@ -3,19 +3,19 @@
     <!-- <p class="t cent botli"><?= $DB->title; ?></p> -->
 
     <div class="cent">
-        <form method="post" action="api/edit.php?do=<?= $DB->table; ?>">
+    <form method="post" action="api/edit.php?do=<?= $DB->table; ?>">
 
-    <input class="text-center my-2" type="text" name="titles[]" style="height:30px; width:130px ; background:white" 
-    <?php if(empty($Collection->find(['sh' => '1'])['titles'])){
+     <input class="text-center my-2" type="text" name="titles[]" style="height:30px; width:130px ; background:white" 
+        <?php if(empty($Collection->find(['sh' => '1'])['titles'])){
                     echo "";
-    }else{
-    ?>
-    value="<?= $Collection->find(['sh' => '1'])['titles']; ?>" > 管理
-    <?php
-    } 
-    ?>
+        }else{
+     ?>
+     value="<?= $Collection->find(['sh' => '1'])['titles']; ?>" > 管理
+        <?php
+        } 
+        ?>
     
-</div>
+        </div>
 
         <table width="100%">
             <tbody>

@@ -21,12 +21,12 @@ switch($DB->table){
         $data['acc']=$_POST['acc'];
         $data['pw']=$_POST['pw'];
     break;
-    case "pf_menu":
-        $data['name']=$_POST['name'];
-        $data['href']=$_POST['href'];
-        $data['sh']=1;
-        $data['parent']=0;
-    break;
+    // case "pf_menu":
+    //     $data['name']=$_POST['name'];
+    //     $data['href']=$_POST['href'];
+    //     $data['sh']=1;
+    //     $data['parent']=0;
+    // break;
     case "pf_skills":
         $data['text']=$_POST['text'];
         $data['class']=$_POST['class']??'';
@@ -43,7 +43,8 @@ switch($DB->table){
         $data['link_gh']=$_POST['link_gh']??'';
         $data['rank']=$_POST['rank']??'';
         $data['sort']=$_POST['sort']??'';
-        $data['sh']=1;
+        $data['titles']=$_POST['titles']??'';
+        $data['sh']=0;
     break;
     default:
         $data['text']=$_POST['text']??'';
@@ -53,6 +54,7 @@ switch($DB->table){
 
 }
 
+// dd($data);
 $DB->save($data);
-to("../back.php?do=".$DB->table)
+// to("../back.php?do=".$DB->table)
 ?>

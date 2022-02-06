@@ -30,6 +30,10 @@
             <td>連結gh：</td>
             <td><input type="text" name="link_gh" ></td>
         </tr>
+        <tr>
+            <td>title：</td>
+            <td><input type="text" name="titles" ></td>
+        </tr>
     </table>
     <div><input type="submit" value="新增"><input type="reset" value="重置"></div>
 </form>

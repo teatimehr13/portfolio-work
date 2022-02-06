@@ -18,7 +18,7 @@
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-12">
-                        <img src=" ../img/<?= $Me->find(['sh' => '1'])['img']; ?>" class="img-fluid">
+                        <img src=" ./img/<?= $Me->find(['sh' => '1'])['img']; ?>" class="img-fluid">
                     </div>
                     <!-- <span> Hello this is Henry</span>
                     <span>I graduated from the Chihlee University of Technology with a major in International trade.</span>
