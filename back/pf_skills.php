@@ -5,14 +5,8 @@
     <div class="cent">
 
     <input class="text-center my-2" type="text" name="titles[]" style="height:30px; width:130px ; background:white" 
-  <?php if(empty($Skills->find(['sh' => '1'])['titles'])){
-                        echo "";
-        }else{
-    ?>
         value="<?= $Skills->find(['sh' => '1'])['titles']; ?>" > 管理
-        <?php
-        } 
-        ?>
+
 
     </div>
 
