@@ -192,7 +192,7 @@ function to($url){
 
 $Total=new DB('pf_total');
 $Bottom=new DB('pf_bottom');
-$Title=new DB('pf_title');
+$Titles=new DB('pf_title');
 $Me=new DB('pf_me');
 $Collection=new DB('pf_collection');
 $Sort=new DB('pf_sort');
@@ -225,7 +225,7 @@ switch($tt){
     break;
 
     default:
-        $DB=$Title;
+        $DB=$Titles;
     break;
 }
 /* $total=$Total->find(1);
