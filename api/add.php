@@ -32,6 +32,7 @@ switch($DB->table){
         $data['class']=$_POST['class']??'';
         $data['icon']=$_POST['icon'];
         $data['position']=$_POST['position'];
+        $data['titles']=$_POST['titles']??'';
         $data['sh']=1;
     break;
     case "pf_collection":
