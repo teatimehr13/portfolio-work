@@ -1,14 +1,9 @@
 <div class="text-center" id="collection" style="padding: 80px 0px ;">
 
         <h1 class="mb-5 text-golden">
-        <?php if(empty($Collection->find(['sh' => '1'])['titles'])){
-                        echo "";
-        }else{
-    ?>
+
         <?= $Collection->find(['sh' => '1'])['titles']; ?>
-        <?php
-        } 
-        ?>
+
         </h1>
         
         <button class="all-btn btn btn-outline-yellow">ALL</button>
