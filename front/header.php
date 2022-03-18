@@ -1,5 +1,5 @@
 <div class="header">
     <nav class="header-logo" id="navbar">    
-        <img src="./img/<?= $Titles->find(['sh' => 1])['img']; ?>">
+        <a href="index.php"><img src="./img/<?= $Titles->find(['sh' => 1])['img']; ?>"></a>
     </nav>
 </div>

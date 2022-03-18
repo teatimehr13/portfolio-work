@@ -1,0 +1,50 @@
+.navbar a {
+    color: aliceblue;
+}
+
+.asideNav{
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(248, 248, 248);
+    font-size: 20px;
+    border-right: 1px solid lightgray;;
+
+}
+
+.asideNav a{
+    display: block;
+    color:rgba(88, 88, 88);
+    text-decoration: none;
+    padding-left: 15px;
+    line-height: 2.5;
+}
+
+.asideNav > div{
+    border-bottom: 1px solid lightgray;
+    padding-left: 15px;
+    line-height: 2.5;
+}
+
+.asideNav > div::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    /* background-color: #629cc9; */
+    background: url('../img/bg.png');
+    overflow: hidden;
+    max-width: 5px;
+    width: 5px;
+    height: 51px;
+    z-index: 1;
+    display: none;
+
+}
+
+.asideNav > div:hover::before{
+    display: block;
+}
+
+.asideNav div:hover{
+    background-color: #ffffff;
+    
+}
