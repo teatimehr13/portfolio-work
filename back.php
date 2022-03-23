@@ -14,8 +14,9 @@ if (!isset($_SESSION['login'])) {
 
     <title>collection</title>
     <link href="./css/css.css" rel="stylesheet" type="text/css">
-    <script src="./js/jquery-1.9.1.min.js"></script>
+    <!-- <script src="./js/jquery-1.9.1.min.js"></script> -->
     <script src="./js/js.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./scss/bootstrap.css">
     <!-- <link rel="stylesheet" href="./style2 copy.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">

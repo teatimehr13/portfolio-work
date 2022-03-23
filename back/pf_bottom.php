@@ -1,4 +1,4 @@
-<div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
+<div style="width:99%; margin:auto; overflow:auto;">
     <p class="t cent botli">頁尾版權資料管理</p>
     <form method="post"  action="./api/bottom.php">
         <table width="100%" style="margin:auto">

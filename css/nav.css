@@ -32,8 +32,8 @@
     /* background-color: #629cc9; */
     background: url('../img/bg.png');
     overflow: hidden;
-    max-width: 5px;
-    width: 5px;
+    max-width: 7px;
+    width: 7px;
     height: 51px;
     z-index: 1;
     display: none;
