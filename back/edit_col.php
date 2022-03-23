@@ -4,7 +4,7 @@
 
 <h2 class="my-3">編輯COLLECTION</h2>
 
-<form action="api/edit_col.php" method="post" enctype="multipart/form-data">
+<form action="api/edit_col.php?do=edit_col" method="post" enctype="multipart/form-data">
     <!-- <table style="background-color: rgba(235, 235, 235);"> -->
 
         <?php

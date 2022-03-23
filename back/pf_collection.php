@@ -25,7 +25,7 @@
                     <td width="10%"><?= $row['text']; ?></td>
                     <!-- <td width="10%"><?= $row['category']; ?></td> -->
                     <td width="10%"><?= $row['sort']; ?></td>
-                    <td width="10%"><a href="#" onclick="stas(<?= $row['id']; ?>,<?= $row['sh']; ?>)"> <?= $checked = ($row['sh'] == 1) ? "顯示中" : "未顯示"; ?></a></td>
+                    <td width="10%"><a href="#" onclick="status(<?= $row['id']; ?>,<?= $row['sh']; ?>)"> <?= $checked = ($row['sh'] == 1) ? "顯示中" : "未顯示"; ?></a></td>
                     <td>
                         <button type="button" class="btn btn-warning btn-sm" onclick="location.href='?do=edit_col&id=<?= $row['id']; ?>'">修改</button>
                         <button type="button" class="btn btn-danger btn-sm" onclick="del('pf_collection',<?= $row['id']; ?>,'<?= $row['text']; ?>')">刪除</button>
@@ -81,11 +81,11 @@
     //         }
     //    })
 
-    function stas(id, sh) {
+    function status(id, sh) {
         let confirms = "確定要變更顯示狀態嗎?";
         // alert(confirms);
         if (confirm(confirms) == true) {
-            $.post('api/edit_col.php', {
+            $.post('api/edit_col.php?do=col_status', {
                 id,
                 sh
             }, (chk) => {
