@@ -20,7 +20,12 @@
                 $DB=$Me;
                 $GO='pf_me';
             break;
+            case 'edit_bottom':
+                $DB=$Bottom;
+                // $GO='pf_bottom';
+            break;
         }
+
 
         if(isset($_POST['sh'])){
             $col = $DB->find($_POST['id']);
@@ -31,7 +36,7 @@
                 $_POST['img']=$_FILES['img']['name'];
                 move_uploaded_file($_FILES['img']['tmp_name'],"../img/".$_POST['img']);
             }
-            $DB->save($_POST);
+            dd($DB->save($_POST));
         }
 
 // if($col['sh']== 0){
@@ -42,5 +47,5 @@
 //     }
 // }
 
-to("../back2.php?do=$GO");
+// to("../back2.php?do=$GO");
 
