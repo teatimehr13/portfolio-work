@@ -85,7 +85,7 @@
         let confirms = "確定要變更顯示狀態嗎?";
         // alert(confirms);
         if (confirm(confirms) == true) {
-            $.post('api/edit_col.php?do=col_status', {
+            $.post('api/edit_col.php?do=edit_col', {
                 id,
                 sh
             }, (chk) => {

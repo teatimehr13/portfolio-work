@@ -8,10 +8,13 @@
         // echo $do;
 
         switch($do){
-            case 'add_col':
             case 'edit_col':
-            case 'col_status':
                 $DB=$Collection;
+                $GO='pf_collection';
+            break;
+            case 'edit_skills':
+                $DB=$Skills;
+                $GO='pf_skills';
             break;
         }
 
@@ -35,5 +38,5 @@
 //     }
 // }
 
-to("../back2.php?do=pf_collection");
+to("../back2.php?do=$GO");
 

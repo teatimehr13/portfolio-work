@@ -2,7 +2,7 @@
 
 <h2 class="my-3">新增COLLECTION</h2>
 
-<form action="api/edit_col.php?do=add_col" method="post" enctype="multipart/form-data">
+<form action="api/edit_col.php?do=edit_col" method="post" enctype="multipart/form-data">
     <!-- <table style="background-color: rgba(235, 235, 235);"> -->
 
 
