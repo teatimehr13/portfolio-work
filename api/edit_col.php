@@ -16,6 +16,10 @@
                 $DB=$Skills;
                 $GO='pf_skills';
             break;
+            case 'edit_me':
+                $DB=$Me;
+                $GO='pf_me';
+            break;
         }
 
         if(isset($_POST['sh'])){

@@ -14,6 +14,11 @@
         <div class="form-group">
             <label for="img">作品圖 : </label>
            <input type="file" name="img" value="<?= $row['img']; ?>" class="form-control-file">
+           <?php
+                if(!empty($row['img'])){
+                echo "<input type='text' name='img' value='{$row['img']}' class='form-control'>";
+            }
+            ?>
         </div>
         <div class="form-group">
             <label for="text">作品名稱 : </label>
