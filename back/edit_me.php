@@ -1,4 +1,12 @@
 <!-- dd($_GET['id']);-->
+<?php
+    if(isset($_SESSION['ok'])){
+        echo "<script>";
+        echo "alert('更新成功')";
+        echo "</script>";
+        unset($_SESSION['ok']);
+    }
+?>
 
 <div class="container">
 

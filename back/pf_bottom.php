@@ -1,3 +1,12 @@
+<?php
+    if(isset($_SESSION['ok'])){
+        echo "<script>";
+        echo "alert('更新成功')";
+        echo "</script>";
+        unset($_SESSION['ok']);
+    }
+?>
+
 <div class="container">
     <h2 class="my-3">FOOTER管理</h2>
     <!-- <form action="/api/edit_col.php?do=edit_bottom" method="post"> -->

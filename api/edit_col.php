@@ -36,7 +36,7 @@
                 $_POST['img']=$_FILES['img']['name'];
                 move_uploaded_file($_FILES['img']['tmp_name'],"../img/".$_POST['img']);
             }
-            dd($DB->save($_POST));
+            $DB->save($_POST);
         }
 
 // if($col['sh']== 0){
@@ -46,6 +46,6 @@
 //         $col['sh']=0;
 //     }
 // }
-
-// to("../back2.php?do=$GO");
+$_SESSION['ok']='ok';
+to("../back2.php?do=$GO");
 

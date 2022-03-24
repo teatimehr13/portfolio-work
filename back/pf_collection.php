@@ -1,3 +1,12 @@
+<?php
+    if(isset($_SESSION['ok'])){
+        echo "<script>";
+        echo "alert('更新成功')";
+        echo "</script>";
+        unset($_SESSION['ok']);
+    }
+?>
+
 <style>
     .fa-square-plus:hover{
         cursor: pointer;

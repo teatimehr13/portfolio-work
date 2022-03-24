@@ -10,61 +10,61 @@ class DB{
     protected $user="root";
     protected $pw='';
     protected $pdo;
-    // public $table;
-    // public $title;
-    // public $button;
-    // public $header;
-    // public $append;
-    // public $upload;
+    public $table;
+    public $title;
+    public $button;
+    public $header;
+    public $append;
+    public $upload;
 
     public function __construct($table){
         $this->table=$table;
         $this->pdo=new PDO($this->dsn,$this->user,$this->pw);
-        // $this->setStr($table);
+        $this->setStr($table);
     }
 
-    // private function setStr($table){
-    //     switch($table){
-    //         case "pf_title";
-    //             $this->title="HEADER管理";
-    //             $this->button="新增HEADER圖片";
-    //             $this->header="HEADER標題";
-    //             $this->append="替代文字";
-    //             $this->upload="HEADER圖片";
-    //         break;
-    //         case "pf_me";
-    //         $this->title="ME管理";
-    //         $this->button="新增ME圖片";
-    //         $this->header="ME標題";
-    //         $this->append="ME替代文字";
-    //         $this->upload="ME圖片";
-    //         break;
-    //         case "pf_collection";
-    //         $this->title="COLLECTION管理";
-    //         $this->button="新增COLLECTION圖片";
-    //         $this->header="COLLECTIONE標題";
-    //         $this->append="COLLECTIONE替代文字";
-    //         $this->upload="COLLECTION圖片";
-    //         break;
-    //         case "pf_skills";
-    //         $this->title="SKILLS管理";
-    //         $this->button="新增SKILLS";
-    //         $this->text="SKILLS文字介紹";
-    //         $this->class="CLASS";
-    //         break;
-    //         case "pf_bottom";
-    //         $this->title="頁尾版權資料管理";
-    //         $this->button="";
-    //         $this->header="頁尾版權資料";
-    //         break;
-    //         case "pf_admin";
-    //         $this->title="管理者帳號管理";
-    //         $this->button="新增管理者帳號";
-    //         $this->header="帳號";
-    //         $this->append="密碼";
-    //         break;
-    //     }
-    // }
+    private function setStr($table){
+        switch($table){
+            case "pf_title";
+                $this->title="HEADER管理";
+                $this->button="新增HEADER圖片";
+                $this->header="HEADER標題";
+                $this->append="替代文字";
+                $this->upload="HEADER圖片";
+            break;
+            case "pf_me";
+            $this->title="ME管理";
+            $this->button="新增ME圖片";
+            $this->header="ME標題";
+            $this->append="ME替代文字";
+            $this->upload="ME圖片";
+            break;
+            case "pf_collection";
+            $this->title="COLLECTION管理";
+            $this->button="新增COLLECTION圖片";
+            $this->header="COLLECTIONE標題";
+            $this->append="COLLECTIONE替代文字";
+            $this->upload="COLLECTION圖片";
+            break;
+            case "pf_skills";
+            $this->title="SKILLS管理";
+            $this->button="新增SKILLS";
+            $this->text="SKILLS文字介紹";
+            $this->class="CLASS";
+            break;
+            case "pf_bottom";
+            $this->title="頁尾版權資料管理";
+            $this->button="";
+            $this->header="頁尾版權資料";
+            break;
+            case "pf_admin";
+            $this->title="管理者帳號管理";
+            $this->button="新增管理者帳號";
+            $this->header="帳號";
+            $this->append="密碼";
+            break;
+        }
+    }
     
 
     public function find($id){
@@ -201,33 +201,33 @@ $Admin=new DB('pf_admin');
 
 $tt=$_GET['do']??'';
 
-// switch($tt){
-//     case "pf_me":
-//         $DB=$Me;
-//     break;
-//     case "pf_collection":
-//         $DB=$Collection;
-//     break;
+switch($tt){
+    case "pf_me":
+        $DB=$Me;
+    break;
+    case "pf_collection":
+        $DB=$Collection;
+    break;
 
-//     case "pf_skills":
-//         $DB=$Skills;
-//     break;
+    case "pf_skills":
+        $DB=$Skills;
+    break;
 
-//     case "pf_total":
-//         $DB=$Total;
-//     break;
-//     case "pf_bottom":
-//         $DB=$Bottom;
-//     break;
+    case "pf_total":
+        $DB=$Total;
+    break;
+    case "pf_bottom":
+        $DB=$Bottom;
+    break;
 
-//     case "pf_admin":
-//         $DB=$Admin;
-//     break;
+    case "pf_admin":
+        $DB=$Admin;
+    break;
 
-//     default:
-//         $DB=$Titles;
-//     break;
-// }
+    default:
+        $DB=$Titles;
+    break;
+}
 /* $total=$Total->find(1);
 
 //echo $Total->find(1)['total'];
