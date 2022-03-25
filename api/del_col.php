@@ -22,5 +22,5 @@ if (!empty($_POST['del'])) {
     $db->del($_POST['id']);
 }
 
-
+$_SESSION['del']='刪除成功';
 to("../back2.php?do={$_GET['do']}");

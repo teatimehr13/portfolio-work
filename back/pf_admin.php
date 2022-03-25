@@ -1,3 +1,11 @@
+<?php
+    if(isset($_SESSION['del'])){
+        echo "<script>";
+        echo "alert('刪除成功')";
+        echo "</script>";
+        unset($_SESSION['ok']);
+    }
+?>
 <div class="container">
     <h2 class="my-3">帳號管理</h2>
     <i class="fa-solid fa-square-plus fa-3x" style="color: purple;" onclick="location.href='back2.php?do=add_skills'"></i>
