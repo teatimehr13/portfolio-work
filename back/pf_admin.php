@@ -1,57 +1,35 @@
-<div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
-    <p class="t cent botli"><?=$DB->title;?></p>
-    <form method="post"  action="api/edit.php?do=<?=$DB->table;?>">
-        <table width="100%">
-            <tbody>
-                <tr class="yel">
-
-                    <td width="20%"><?=$DB->header;?></td>
-                    <td width="20%"><?=$DB->append;?></td>
-                    <td width="10%">刪除</td>
-
-                </tr>
-                <?php
-                $rows=$DB->all();
-                foreach($rows as $row){
-                   
-                ?>
-                <tr class="text-center">
-
-                    <td width="20%">
-                        <input type="text" name="acc[]" value="<?=$row['acc'];?>" style="width: 90%;">
-                    </td>
-                    <td width="20%">
-                        <input type="password" name="pw[]" value="<?=$row['pw'];?>" style="width: 90%;">
-                    </td>
-
-                    <td>
-                        <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
-
-                        <input type="hidden" name="id[]" value="<?=$row['id'];?>">
-                    </td>
-
-                </tr>
-                <?php
-                }
-                ?>
-            </tbody>
-        </table>
-        <table style="margin-top:40px; width:70%;">
-            <tbody>
-                <tr>
-                    <td width="200px">
-                        <input type="button"
-                            onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;modal/<?=$DB->table;?>.php?table=<?=$DB->table;?>&#39;)" 
-                              value="<?=$DB->button;?>">
-                    </td>
-                    <td class="cent">
-                        
-                        <input type="submit" value="修改確定">
-                        <input type="reset" value="重置">
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
+<div class="container">
+    <h2 class="my-3">帳號管理</h2>
+    <i class="fa-solid fa-square-plus fa-3x" style="color: purple;" onclick="location.href='back2.php?do=add_skills'"></i>
+    <form action="api/del_col.php?do=pf_admin" method="post">
+    <table class="table table-striped text-center">
+        <tr>
+            <td width="20%">會員帳號</td>
+            <td width="20%">密碼</td>
+            <td width="20%">刪除</td>
+        </tr>
+        <tr>
+            <?php
+            $rows = $Admin->all();
+            // $checked="checked";
+            foreach ($rows as $row) {
+            ?>
+                <td><?= $row['acc']; ?></td>
+                <td><?= $row['pw']; ?></td>
+                <td><input type="checkbox" name="del[]" value="<?= $row['id'];?>"></td> <!--選中的-->
+                <input type="hidden" name="id[]" value="<?= $row['id'];?>"> <!--把全部的id傳過去-->
+                <input type="hidden" name="table" value="pf_admin">
+               
+        </tr>
+    <?php
+            }
+    ?>
+    
+    </table>
+    <div class="text-center my-3"><button type="submit" class="btn btn-danger btn-sm">確定刪除</button></div>
+    
     </form>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+

@@ -36,7 +36,9 @@
                 $_POST['img']=$_FILES['img']['name'];
                 move_uploaded_file($_FILES['img']['tmp_name'],"../img/".$_POST['img']);
             }
-            $DB->save($_POST);
+            if(!empty($_POST)){
+                $DB->save($_POST);
+            }
         }
 
 // if($col['sh']== 0){
