@@ -7,15 +7,14 @@
 // $do=$_POST;
 // dd($do);
 
-//一次刪多個by using form ;塞del[]&id (帳號管理)
-if (!empty($_POST['id'] && $_POST['del'])) {
-    foreach ($_POST['id'] as $id) {
-        if (in_array($id, $_POST['del'])) {
+//一次刪多個by using form ;塞del[]值為id (帳號管理)
+if (!empty($_POST['del'])) {
+    foreach ($_POST['del'] as $id) {
             $db = new DB($_POST['table']);
             $db->del($id);
-        }
     }
-//一次刪一個 by using ajax ;只塞id  
+
+//一次刪一個 by using ajax ;塞id  (作品集管理)
 } else {
     $db = new DB($_POST['table']);
     $img = $db->find($_POST['id']);
