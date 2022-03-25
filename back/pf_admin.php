@@ -3,7 +3,7 @@
         echo "<script>";
         echo "alert('刪除成功')";
         echo "</script>";
-        unset($_SESSION['ok']);
+        unset($_SESSION['del']);
     }
 ?>
 <div class="container">
