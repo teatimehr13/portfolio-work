@@ -24,6 +24,10 @@
                 $DB=$Bottom;
                 // $GO='pf_bottom';
             break;
+            case 'edit_title':
+                $DB=$Titles;
+                $GO='pf_title';
+            break;
         }
 
 
