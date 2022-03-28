@@ -1,4 +1,11 @@
 <?php
+    if(isset($_SESSION['ok'])){
+        echo "<script>";
+        echo "alert('新增成功')";
+        echo "</script>";
+        unset($_SESSION['ok']);
+    }
+
     if(isset($_SESSION['del'])){
         echo "<script>";
         echo "alert('刪除成功')";
@@ -6,9 +13,16 @@
         unset($_SESSION['del']);
     }
 ?>
+
+<style>
+    .fa-square-plus:hover {
+        cursor: pointer;
+    }
+</style>
+
 <div class="container">
     <h2 class="my-3">HEADER管理</h2>
-    <i class="fa-solid fa-square-plus fa-3x" style="color: purple;" onclick="location.href='back2.php?do=add_user'"></i>
+    <i class="fa-solid fa-square-plus fa-3x" style="color: purple;" onclick="location.href='back2.php?do=add_header'"></i>
     <form action="api/edit_title.php" method="post">
     <table class="table table-striped text-center">
         <tr>
