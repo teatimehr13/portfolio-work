@@ -8,7 +8,7 @@
 ?>
 <div class="container">
     <h2 class="my-3">帳號管理</h2>
-    <i class="fa-solid fa-square-plus fa-3x" style="color: purple;" onclick="location.href='back2.php?do=add_skills'"></i>
+    <i class="fa-solid fa-square-plus fa-3x" style="color: purple;" onclick="location.href='back2.php?do=add_user'"></i>
     <form action="api/del_col.php?do=pf_admin" method="post">
     <table class="table table-striped text-center">
         <tr>
