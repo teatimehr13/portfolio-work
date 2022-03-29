@@ -65,7 +65,7 @@
         </div>
         <div class="form-group">
             <td class="py-3"><button type="submit" class="btn btn-info btn-sm">確定修改</button></td>
-            <td><button type="button" class="btn btn-secondary btn-sm" onclick="location.href='back2.php?do=pf_collection'">返回上一頁</button></td>
+            <td><button type="button" class="btn btn-secondary btn-sm" onclick="location.href='back2.php?do=collection'">返回上一頁</button></td>
         </div>
         <input type="hidden" name="id" value="<?= $row['id']; ?>">
 

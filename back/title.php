@@ -12,6 +12,13 @@
         echo "</script>";
         unset($_SESSION['del']);
     }
+    
+    if(isset($_SESSION['sh'])){
+        echo "<script>";
+        echo "alert('顯示變更成功')";
+        echo "</script>";
+        unset($_SESSION['sh']);
+    }
 ?>
 
 <style>

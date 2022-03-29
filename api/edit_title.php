@@ -23,9 +23,10 @@ foreach ($_POST['id'] as $id) {
             // dd($id); // 1,2,3,4
             // dd($_POST['sh']); // 3,3,3,3 (假設radio第3個被選取)
             // dd($sh); //0,0,1,0
+            $_SESSION['sh']='ok';
 
         }
     }
 }
 
-to('../back2.php?do=pf_title');
+to('../back2.php?do=title');

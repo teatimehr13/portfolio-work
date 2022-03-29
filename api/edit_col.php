@@ -10,15 +10,15 @@
         switch($do){
             case 'edit_col':
                 $DB=$Collection;
-                $GO='pf_collection';
+                $GO='collection';
             break;
             case 'edit_skills':
                 $DB=$Skills;
-                $GO='pf_skills';
+                $GO='skills';
             break;
             case 'edit_me':
                 $DB=$Me;
-                $GO='pf_me';
+                $GO='me';
             break;
             case 'edit_bottom':
                 $DB=$Bottom;
@@ -26,7 +26,7 @@
             break;
             case 'edit_title':
                 $DB=$Titles;
-                $GO='pf_title';
+                $GO='title';
             break;
         }
 

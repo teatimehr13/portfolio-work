@@ -1,6 +1,13 @@
 ﻿<?php 
 include_once "./base.php";
 ?>
+
+<?php
+    if(empty($_SESSION['login'])){
+        to('./back2.php?do=login');
+        exit();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,12 +33,12 @@ include_once "./base.php";
     <div class="container-fluid px-0 d-flex">
 
         <div class="asideNav position-fixed">
-            <div><a href="?do=pf_title"><span>HEADER</span></a></div>
-            <div><a href="?do=pf_me">ME</a></div>
-            <div><a href="?do=pf_collection">COLLECTION</a></div>
-            <div><a href="?do=pf_skills">SKILLS</a></div>
-            <div><a href="?do=pf_bottom">FOOTER</a></div>
-            <div><a href="?do=pf_admin">USERS</a></div>
+            <div><a href="?do=title"><span>HEADER</span></a></div>
+            <div><a href="?do=me">ME</a></div>
+            <div><a href="?do=collection">COLLECTION</a></div>
+            <div><a href="?do=skills">SKILLS</a></div>
+            <div><a href="?do=bottom">FOOTER</a></div>
+            <div><a href="?do=admin">USERS</a></div>
         </div>
 
 

@@ -15,7 +15,7 @@
 
         <div class="form-group">
             <button type="submit" class="btn btn-info btn-sm">新增</button>
-            <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='back2.php?do=pf_title'">返回上一頁</button>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='back2.php?do=title'">返回上一頁</button>
         </div>
     
     </form>

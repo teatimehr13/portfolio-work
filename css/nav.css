@@ -48,3 +48,32 @@
     background-color: #ffffff;
     
 }
+
+.drop-down{
+    color: #fff;
+    margin-right: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.drop-down::before{
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: rgba(55, 55, 55);
+    position: absolute;
+    left: -18px;
+    top: -10px;
+    border-radius: 50px;
+    z-index: -1;
+    box-shadow: 0 0 2px #fff;
+}
+
+.down-content{
+    position: absolute;
+    right: 18px;
+    top:65px;
+    width: 300px;
+    background-color: rgba(55, 55, 55);
+    color: rgba(248, 248, 248);
+}

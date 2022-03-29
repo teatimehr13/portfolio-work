@@ -5,6 +5,13 @@
         echo "</script>";
         unset($_SESSION['ok']);
     }
+
+    if(isset($_SESSION['del'])){
+        echo "<script>";
+        echo "alert('刪除成功')";
+        echo "</script>";
+        unset($_SESSION['del']);
+    }
 ?>
 
 <style>

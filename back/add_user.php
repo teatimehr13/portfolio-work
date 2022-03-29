@@ -19,7 +19,7 @@
 
         <div class="form-group">
             <button type="button" class="btn btn-info btn-sm" onclick="submit()">確定修改</button>
-            <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='back2.php?do=pf_admin'">返回上一頁</button>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='back2.php?do=admin'">返回上一頁</button>
         </div>
     
     <!-- </form> -->
@@ -48,7 +48,7 @@
                         delete user.pw2;
                         $.post('api/chk_user.php',user,(chk2)=>{
                             alert('註冊完成')
-                            location.href='back2.php?do=pf_admin';
+                            location.href='back2.php?do=admin';
                             // alert(chk2);
                         })
                     }

@@ -37,7 +37,7 @@
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-info btn-sm">確定修改</button>
-            <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='back2.php?do=pf_skills'">返回上一頁</button></td>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='back2.php?do=skills'">返回上一頁</button></td>
         </div>
         <input type="hidden" name="id" value="<?= $row['id']; ?>">
 

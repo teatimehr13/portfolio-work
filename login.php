@@ -2,7 +2,7 @@
 include_once "base.php";
 
 if (isset($_SESSION['login'])) {
-    to("back.php");
+    to("back2.php");
 }
 
 if(isset($_SESSION['error'])){
