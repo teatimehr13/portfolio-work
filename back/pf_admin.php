@@ -6,6 +6,13 @@
         unset($_SESSION['del']);
     }
 ?>
+
+<style>
+    .fa-square-plus:hover {
+        cursor: pointer;
+    }
+</style>
+
 <div class="container">
     <h2 class="my-3">帳號管理</h2>
     <i class="fa-solid fa-square-plus fa-3x" style="color: purple;" onclick="location.href='back2.php?do=add_user'"></i>
