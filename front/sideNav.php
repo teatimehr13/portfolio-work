@@ -6,8 +6,6 @@
         <a href="#introduceME">INTRODUCE</a>
         <a href="#collection">COLLECTION</a>
         <a href="#skills">SKILLS</a>
-        <!-- <a href="../login.php">LOGIN</a> -->
-        <!-- <a href="../login.php" style="display:none">LOGIN</a> -->
     </nav>
 </div>
 

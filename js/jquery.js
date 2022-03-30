@@ -30,38 +30,20 @@ $(function () {
 });
 
 $(document).ready(function () {
-    // $('.all').delay(500).fadeIn();
-    // $('.all').each(function(index) {
-    //     $(this).delay(500*index).fadeIn();
-    //     });
-
     $('.all-btn').on('click', function () {
-        // event.stopPropagation();
         $('.all').hide();
-        // $('.all ').each(function(index){
-        // $(this).delay(500*index).fadeIn();
         $('.all').fadeIn();
-        // })
     })
 
     $('.f2n-btn').on('click', function () {
         $('.all').hide();
         $('.f2n').fadeIn();
-        // $('.collection-row').removeClass();
-        // $('.f2n').each(function (index) {
-        //     $(this).delay(200 * index).fadeIn();
     })
-    // })
 
 
     $('.b2n-btn').on('click', function () {
         $('.all').hide();
         $('.b2n').fadeIn();
-        // $('.collection-row').removeClass();
-        // $('.b2n').each(function (index) {
-        //     $(this).delay(200 * index).fadeIn();
-        // })
-
     })
 
     $('.others-btn').on('click', function () {
@@ -72,29 +54,25 @@ $(document).ready(function () {
 })
 
 // nav
-
 $(document).ready(function () {
 
     $('#menuBtn').on('click', function (event) {
         event.stopPropagation();  //阻止事件冒泡(阻止該觸發連動其他的click事件)
         $(".asdieNav").animate({ width: 'show' }, 400);
-        // $(".navBody").css('background', 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("./img/cloud.png")');
-        // $(".navBody").css('z-index', '999');
         $('.fullCover').show();
         $(".body").css('overflow', 'hidden')
-        // $(".navBody").css('overflow', 'hidden')
 
     })
 
     $('#asideCloseBtn').on('click', function (event) {
         $(".asdieNav").animate({ width: 'hide' }, 400);
-        // $(".navBody").css('background', 'linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url("./img/cloud.png")');
         $('.fullCover').hide();
         $(".body").css('overflow', '')
-        // $(".navBody").css('overflow', '')
     })
 
-    $('.drop-down').on('click',()=>{
+    $('.drop-down').on('click',(event)=>{
+        //防止連動.down-content Btn
+        event.stopPropagation();
         $('.down-content').fadeToggle(150)
     })
 
@@ -108,7 +86,13 @@ $(document).ready(function () {
             // $(".navBody").css('background', 'linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url("./img/cloud.png")');
             $('.fullCover').hide();
             $(".body").css('overflow', '');
-            // $(".navBody").css('overflow', '');
+        }
+
+        //後台右上角按鈕
+        var $targets = $(event.target);
+        if (!$targets.closest('.down-content').length &&
+            $('.down-content').is(":visible")) {
+            $(".down-content").css('display','none')
         }
     })
 
@@ -152,7 +136,6 @@ $(document).ready(function () {
     // console.log(all);
 
     $('.right').on('click', function () {
-
         if ((p + 2) <= all) {
             p++;
         }
