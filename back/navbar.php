@@ -4,11 +4,24 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="drop-down ml-auto ">
-    <!-- <i class="fa-solid fa-circle-chevron-down"></i> -->
     <i class="fa-solid fa-caret-down"></i>
   </div>
 
   <div class="down-content">
-    123456789
+    <ul>
+      <li><a href="index.php"><i class="fa-solid fa-window-maximize"></i>前台</a></li>
+      <li><a href="#" onclick="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i>登出</a></li>
+    </ul>
   </div>
 </nav>
+
+<script>
+  function logout() {
+    confirms = '確定要登出嗎?';
+    if (confirm(confirms) == true) {
+      $.post('api/logout.php', () => {
+        location.href='index.php';
+      })
+    }
+  }
+</script>

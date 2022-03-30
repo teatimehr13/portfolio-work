@@ -54,6 +54,8 @@
     margin-right: 15px;
     position: relative;
     z-index: 1;
+    display: block;
+    cursor: pointer;
 }
 
 .drop-down::before{
@@ -72,8 +74,31 @@
 .down-content{
     position: absolute;
     right: 18px;
-    top:65px;
+    top:68px;
     width: 300px;
     background-color: rgba(55, 55, 55);
     color: rgba(248, 248, 248);
+    border-radius: 7px;
+    box-shadow: 0 0 2px #fff;
+    z-index: 999;
+    display: none;
+}
+
+.down-content ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.down-content li:hover{
+    background-color: rgba(75, 75, 75)
+}
+
+.down-content a {
+    line-height: 2;
+    display: block;
+    text-decoration: none;
+}
+
+.down-content .fa-solid {
+    margin: 20px;
 }
