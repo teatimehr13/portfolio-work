@@ -37,7 +37,7 @@
             <td width="20%">文字</td>
             <td width="20%">顯示</td>
             <td width="20%">刪除</td>
-            <td width="20%"></td>
+            <td width="20%">修改</td>
         </tr>
         <tr>
             <?php
@@ -45,7 +45,7 @@
             foreach ($rows as $row) {
             $checked=($row['sh']==1)?"checked":'';    
             ?>
-                <td><img src="../img/<?= $row['img'];?>" style="width:300px;height:30px"></td>
+                <td><img src="./img/<?= $row['img'];?>" style="width:300px;height:30px" class="img-fluid"></td>
                 <td><?= $row['text']; ?></td>
                 <td><input type="radio" name="sh" value="<?=$row['id'];?>" <?=$checked;?>></td> <!--選中的-->
                 <td><input type="checkbox" name="del[]" value="<?=$row['id'];?>"></td>

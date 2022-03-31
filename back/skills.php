@@ -1,17 +1,17 @@
 <?php
-    if(isset($_SESSION['ok'])){
-        echo "<script>";
-        echo "alert('更新成功')";
-        echo "</script>";
-        unset($_SESSION['ok']);
-    }
+if (isset($_SESSION['ok'])) {
+    echo "<script>";
+    echo "alert('更新成功')";
+    echo "</script>";
+    unset($_SESSION['ok']);
+}
 
-    if(isset($_SESSION['del'])){
-        echo "<script>";
-        echo "alert('刪除成功')";
-        echo "</script>";
-        unset($_SESSION['del']);
-    }
+if (isset($_SESSION['del'])) {
+    echo "<script>";
+    echo "alert('刪除成功')";
+    echo "</script>";
+    unset($_SESSION['del']);
+}
 ?>
 
 <style>
@@ -59,26 +59,29 @@
         let confirms = "確定要刪除" + text + "嗎?";
         if (confirm(confirms) == true) {
             $.post('api/del_col.php', {
-                table,
-                id
-            }, (chk) => {
-                location.reload();
-            })
+                    table,
+                    id
+                }, () => {
+                    // location.reload(true);
+                    history.go(0);
+                    // location.replace()
+                    // window.location.reload(true);
+                    })
+            }
         }
-    }
 
-    function status(id, sh) {
-        let confirms = "確定要變更顯示狀態嗎?";
-        // alert(confirms);
-        if (confirm(confirms) == true) {
-            $.post('api/edit_col.php?do=edit_skills', {
-                id,
-                sh
-            }, (chk) => {
-                // alert(chk);
-                location.reload();
+        function status(id, sh) {
+            let confirms = "確定要變更顯示狀態嗎?";
+            // alert(confirms);
+            if (confirm(confirms) == true) {
+                $.post('api/edit_col.php?do=edit_skills', {
+                    id,
+                    sh
+                }, (chk) => {
+                    // alert(chk);
+                    location.reload(true);
 
-            })
+                })
+            }
         }
-    }
 </script>

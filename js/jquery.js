@@ -76,7 +76,6 @@ $(document).ready(function () {
         $('.down-content').fadeToggle(150)
     })
 
-
 })
     $(document).click(function (event) {
         var $target = $(event.target);

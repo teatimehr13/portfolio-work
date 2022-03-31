@@ -43,69 +43,6 @@
 </div>
 </div>
 
-    <!-- <div class="container-fluid custom-gutters;" style="min-height: 500px;">
-        <div class="row px-2 px-md-5 collection-row">
-            <div class="collection col-6 col-md-3 all b2n mb-5 text-center text-light mx-2">
-                <div class="collection_card mb-3">
-                    <a href="*"><img src="./img/cal01.png" class="img-fluid py-3"></a>
-                </div>
-                <h4>Calendar</h4>
-                <p>PHP</p>
-                <div class="collection_atag">
-                    <a href="http://220.128.133.15/s1100410/calendarr/index.php?year=2021&month=01"><i
-                            class="far fa-eye"></i></a>
-                    <a href="https://github.com/teatimehr13/calendar"><i class="fab fa-github"></i></a>
-                </div>
-            </div> -->
-            <!--- 分隔待刪 -->
-
-            <!-- <div class="collection col-6 col-md-3 all b2n mb-5 text-center text-light mx-2">
-
-                <div class="collection_card mb-3">
-                    <a href="*"><img src="./img/sv01-1.png" class="img-fluid py-3"></a>
-                </div>
-                <h4>Polling Website</h4>
-                <p>PHP</p>
-                <div class="collection_atag">
-                    <a href="http://220.128.133.15/s1100410/hello/"><i class="far fa-eye"></i></a>
-                    <a href="https://github.com/teatimehr13/survey"><i class="fab fa-github"></i></a>
-                </div>
-
-            </div> -->
-
-            <!--- 分隔待刪3 -->
-<!-- 
-            <div class="collection col-6 col-md-3 all f2n mb-5 text-center text-light mx-2">
-
-                <div class="collection_card mb-3">
-                    <a href="*"><img src="./img/tc01.jpg" class="img-fluid py-3"></a>
-                </div>
-                <h4>Calendar</h4>
-                <p>PHOTOSHOP</p>
-                <div class="collection_atag">
-                    <a href="img/tiger calendar 01.jpg"><i class="far fa-eye"></i></a>
-                </div>
-
-            </div> -->
-
-            <!--- 分隔待刪4 -->
-
-            <!-- <div class="collection col-6 col-md-3 all f2n mb-5 text-center text-light mx-2">
-
-                <div class="collection_card mb-3">
-                    <a href="*"><img src="./img/pm01.png" class="img-fluid py-3"
-                            style="width:100%;max-height:295px"></a>
-                </div>
-                <h4>Banner</h4>
-                <p>PHOTOSHOP</p>
-                <div class="collection_atag">
-                    <a href="img/promo01.png"><i class="far fa-eye"></i></a>
-                </div>
-
-            </div>
-
-        </div>
-    </div> -->
 
 
     

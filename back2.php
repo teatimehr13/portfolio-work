@@ -1,12 +1,12 @@
-﻿<?php 
+﻿<?php
 include_once "./base.php";
 ?>
 
 <?php
-    if(empty($_SESSION['login'])){
-        to('./login.php');
-        exit();
-    }
+if (empty($_SESSION['login'])) {
+    to('./login.php');
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +20,7 @@ include_once "./base.php";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/main.css">
-    
+
 
 </head>
 
@@ -30,17 +30,20 @@ include_once "./base.php";
     include "./back/navbar.php";
     ?>
 
+    <?php
+    include_once "./back/mobile_nav.php";
+    ?>
+
     <div class="container-fluid px-0 d-flex">
 
         <div class="asideNav position-fixed">
-            <div><a href="?do=title"><span>HEADER</span></a></div>
+            <div><a href="?do=title">HEADER</a></div>
             <div><a href="?do=me">ME</a></div>
             <div><a href="?do=collection">COLLECTION</a></div>
             <div><a href="?do=skills">SKILLS</a></div>
             <div><a href="?do=bottom">FOOTER</a></div>
             <div><a href="?do=admin">USERS</a></div>
         </div>
-
 
         <div class="main container">
             <?php
@@ -57,9 +60,8 @@ include_once "./base.php";
             ?>
 
         </div>
-
-
     </div>
+
 
 </body>
 <!--slim沒有支援ajax及部分jquery動畫-->
@@ -68,4 +70,5 @@ include_once "./base.php";
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
 <script src="./js/jquery.js"></script>
+
 </html>
