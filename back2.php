@@ -45,6 +45,7 @@ if (empty($_SESSION['login'])) {
             <div><a href="?do=admin">USERS</a></div>
         </div>
 
+
         <div class="main container">
             <?php
 
@@ -54,14 +55,13 @@ if (empty($_SESSION['login'])) {
                 include $file;
             } else {
                 //echo "檔案不存在";
-                include "./back/pf_title.php";
+                include "./back/title.php";
             }
 
             ?>
 
         </div>
     </div>
-
 
 </body>
 <!--slim沒有支援ajax及部分jquery動畫-->
@@ -70,5 +70,8 @@ if (empty($_SESSION['login'])) {
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
 <script src="./js/jquery.js"></script>
+<script>
+
+</script>
 
 </html>

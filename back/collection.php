@@ -5,7 +5,15 @@
         echo "</script>";
         unset($_SESSION['ok']);
     }
-?>
+
+    if (isset($_SESSION['del'])) {
+        echo "<script>";
+        echo "alert('刪除成功')";
+        echo "</script>";
+        unset($_SESSION['del']);
+    }
+    ?>
+
 
 <style>
     .fa-square-plus:hover{
@@ -57,6 +65,7 @@
             }, (chk) => {
                 location.reload();
                 // $('.test').html(chk);
+                // window.location.replace(window.location.href);
             })
         }
     }

@@ -63,9 +63,10 @@ if (isset($_SESSION['del'])) {
                     id
                 }, () => {
                     // location.reload(true);
-                    history.go(0);
+                    // history.go(0);
                     // location.replace()
                     // window.location.reload(true);
+                    window.location.replace(window.location.href);
                     })
             }
         }

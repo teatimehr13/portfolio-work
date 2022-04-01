@@ -1,4 +1,6 @@
 <?php
+    // include_once "../base.php";
+
     if(isset($_SESSION['del'])){
         echo "<script>";
         echo "alert('刪除成功')";
