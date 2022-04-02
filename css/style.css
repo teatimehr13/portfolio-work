@@ -217,6 +217,18 @@ h1{
     border-color: #f2a900;
 }
 
+/* .login{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -250px;
+    box-shadow: 3px 3px 5px 6px rgba(245,245,245);
+    box-sizing: border-box;
+} */
+
 
 @media (max-width: 767px) {
     .header-logo{
@@ -439,13 +451,15 @@ h1{
 
 .form{
     width: 400px;
-    height: 350px;
+    height: 450px;
     position: absolute;
     top:50%;
     left: 50%;
-    margin-top: -150px; 
+    margin-top: -225px; 
     margin-left: -200px; 
-    box-shadow: 0px 0px 15px 15px #b392ac inset;
+    -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.7));
+    filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.7));
+    box-shadow: 3px 4px 6px 5px rgba(235,235,235);
 
 }
 

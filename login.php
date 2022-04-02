@@ -32,18 +32,18 @@ if(isset($_SESSION['error'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="login-body" style="background:url('./img/bg.png')">
 
     <div class="container" style="max-width: 600px; ">
         <div class="row form text-center d-block p-4">
-            <h2 class="text-light">LOGIN</h2>
+            <h2 class="text-light mb-5">LOGIN</h2>
             <form method="post" action="./api/login.php">
                 <input type="text" class="form-control form-control-lg mt-4 mb-2" id="acc" name="acc" placeholder="ACCOUNT" required>
                 <input type="password" class="form-control form-control-lg mb-4" id="pas" name="pw" placeholder="PASSWORD" required>
-                <button type="submit" class="btn-outline-yellow btn-lg btn-block"> GO</button>
+                <button type="submit" class="btn-outline-yellow btn-lg btn-block mt-5"> GO</button>
                 <button type="reset" class="btn-outline-yellow btn-lg btn-block">RESET</button>
             </form>
         </div>
