@@ -459,7 +459,7 @@ h1{
     margin-left: -200px; 
     -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.7));
     filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.7));
-    box-shadow: 3px 4px 6px 5px rgba(235,235,235);
+    box-shadow: 0px 0px 10px 0px rgba(235,235,235);
 
 }
 
