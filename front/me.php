@@ -21,7 +21,7 @@
             </div>
             <div class="col-md-6 d-flex align-items-center">
                     <?php 
-                    $mes = $Me->all(" where `sh`=1 ORDER BY ordered");
+                    $mes = $Me->all(" where `sh`=1 ORDER BY rank");
                     foreach($mes as $me){
                         echo "<div class='text-white text-left meContent'>{$me['text']}</div>";
                     
