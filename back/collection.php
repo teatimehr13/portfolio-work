@@ -30,12 +30,25 @@
                 <td width="20%">作品名稱</td>
                 <td width="20%">作品分類</td>
                 <td width="20%">顯示狀態</td>
-                <td width="20%">修改 / 刪除</td>
+                <td width="20%">刪改 / 排序</td>
             </tr>
 
             <?php
-            $rows = $Collection->all();
-            foreach ($rows as $row) {
+            $rows = $Collection->all(" ORDER BY rank ASC");
+            // echo($rows[0]['id']);
+            foreach ($rows as $key => $row) {
+                if($key==0){
+                    $up=$row['id']. "-" .$row['id'];
+                    $down=$row['id']. "-" .$rows[$key+1]['id'];
+                }
+                if($key>0 && $key<(count($rows)-1)){  //在第一和最後的區間
+                    $up=$row['id']. "-" .$rows[$key-1]['id'];
+                    $down=$row['id']. "-" .$rows[$key+1]['id'];
+                }
+                if($key==(count($rows)-1)){
+                    $up=$row['id']. "-" .$rows[$key-1]['id'];
+                    $down=$row['id']. "-" .$row['id'];
+                }
             ?>
                 <tr>
                     <td width="10%"> <img src="./img/<?= $row['img']; ?>" style="width:100px;height:80px"></td>
@@ -45,8 +58,10 @@
                     <td width="10%"><a href="#" onclick="status(<?= $row['id']; ?>,<?= $row['sh']; ?>)"> <?= $checked = ($row['sh'] == 1) ? "顯示中" : "未顯示"; ?></a></td>
                     <td>
                         <button type="button" class="btn btn-warning btn-sm" onclick="location.href='?do=edit_col&id=<?= $row['id']; ?>'">修改</button>
-                        <button type="button" class="btn btn-danger btn-sm" onclick="del('pf_collection',<?= $row['id']; ?>,'<?= $row['text']; ?>')">刪除</button>
+                        <button type="button" class="btn btn-danger btn-sm" onclick="del('pf_collection',<?= $row['id']; ?>,'<?= $row['text']; ?>')">刪除</button><br>
                         <!-- <button type="button" class="btn btn-danger btn-sm del" data-id="<?= $row['id']; ?>" data-table="pf_collection" data-text="<?= $row['text']; ?>">刪除</button> -->
+                        <button type="button" class="btn btn-secondary btn-sm switch"  data-switch="<?=$up?>">往上</button> <!--不可以用id命名2個switch-->
+                        <button type="button" class="btn btn-secondary btn-sm switch"  data-switch="<?=$down?>">往下</button>
                     </td>
                 </tr>
             <?php
@@ -54,6 +69,7 @@
             ?>
 
 </div>
+
 
 <script>
     function del(table, id, text) {
@@ -87,16 +103,6 @@
     // }
     // })
 
-
-    //    $('#stas').on('click',function(){
-    //         let id = $(this).data('ids');
-    //         // let switch = <?= $checked = ($row['sh'] == 1) ? "顯示中" : "不顯示"; ?>;
-    //         let confirms ="要更改狀態嗎?";
-    //         if(confirm(confirms)==true){
-    //             console.log('123') 
-    //         }
-    //    })
-
     function status(id, sh) {
         let confirms = "確定要變更顯示狀態嗎?";
         // alert(confirms);
@@ -111,4 +117,16 @@
             })
         }
     }
+
+    $('.switch').on('click',(e)=>{
+        let id = $(e.target).data('switch').split("-"); //將字串切割成一個字串"陣列"，後可放數字(0開始);substr為切成純字串
+        // alert(id);
+        let table = 'pf_collection';
+        $.post("api/rank.php",{id,table},(chk)=>{
+            // alert(chk);
+            history.go(0);
+        })
+        
+    })
+
 </script>
