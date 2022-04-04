@@ -135,7 +135,7 @@ $(document).ready(function () {
     // console.log(all);
 
     $('.right').on('click', function () {
-        if ((p + 2) <= all) {
+        if ((p + 1) < all) {
             p++;
         }
         $(".meContent").hide()
