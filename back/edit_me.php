@@ -34,7 +34,7 @@
         </div>
         <div class="form-group">
             <label for="class">順序 : </label>
-            <input type="text" name="ordered" class="form-control" value="<?= $row['ordered']; ?>">
+            <input type="text" name="rank" class="form-control" value="<?= $row['rank']; ?>">
         </div>
 
         <div class="form-group">
