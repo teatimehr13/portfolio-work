@@ -23,13 +23,6 @@
         </select>
     </div>
 
-    <!-- <p>
-        <button class="all-btn btn btn-outline-yellow">ALL</button>
-        <button class="f2n-btn all-btn btn btn-outline-yellow">F2N</button>
-        <button class="b2n-btn all-btn btn btn-outline-yellow">B2N</button>
-        <button class="others-btn all-btn btn btn-outline-yellow">OTHERS</button>
-    </p> -->
-
     <div class="row">
         <?php
         $collections = $Collection->all(" where `sh`=1 Order By `rank` ASC");
