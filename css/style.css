@@ -82,18 +82,15 @@ body{
 
 .search{
     position: absolute;
-    /* top:50%; */
-    /* top:0; */
     bottom: -10%;
     left:50%;
     margin-left: -0.65rem;
     /* margin-top: -0.65rem; */
     font-size: 1.3rem;
-    background-color: rgba(64, 69, 71, 0.89);
+    background-color: rgba(204, 209, 211, 0.89);
     color: rgba(240, 240, 240, .9);
     padding: 5px 10px;
     border-radius: 5px;
-    /* display: none; */
     text-decoration: none;
     opacity: 0;
     transition: all 0.5s ease;
