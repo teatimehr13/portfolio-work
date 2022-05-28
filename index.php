@@ -21,6 +21,7 @@ include_once "base.php";
 
 <body class="body">
     <?php include_once "./front/header.php" ?>
+    <?php include_once "./front/homeCover.php" ?>
     <?php include_once "./front/me.php" ?>
     <?php include_once "./front/collection.php" ?>
     <?php include_once "./front/skills.php" ?>

@@ -13,27 +13,35 @@ body{
     
 }
 
-.header{
-    position: fixed;
-    width: 100%;
-    /* background: rgba(25,25,25); */
-    background: url('../img/inline_image_preview.jpg'); 
-    z-index: 9999;
+.container_header{
+    background-color: rgba(245, 245, 245);
 }
 
+.header{
+    border-bottom: 1px solid rgba(200, 200, 200);
+    line-height: 2.4;
+}
 
-.header > div > nav{
+/* .header{
+    position: fixed;
+    width: 100%;
+    background: url('../img/inline_image_preview.jpg'); 
+    z-index: 9999;
+} */
+
+
+/* .header > div > nav{
     display: flex;
     justify-content: end;
     margin: 10px 0px;
-}
+} */
 
-.header > div > nav > a{
+/* .header > div > nav > a{
     font-size: 1rem;
     color: #fff;
     margin-left:25px;
     line-height: 2;
-}
+} */
 
 .container{
     background-color: rgba(245, 245, 245);
@@ -117,10 +125,20 @@ body{
     background-color: lightblue;
 }
 
+.cover{
+    background:url('../img/ben-kolde-bs2Ba7t69mM-unsplash2.jpg');
+    width: 100vw;
+    height: 60vh;
+    background-size:cover;
+    /* background-repeat: no-repeat, repeat-y; */
+    background-position:center;
+    background-attachment: fixed;
+}
 
 
 
-.collection{
+
+/* .collection{
     border-radius: 20px;
     background-color: transparent;
     position: relative;
@@ -140,7 +158,7 @@ body{
 .collection_atag a:hover {
     color: #f2a900;
     opacity:1;
-}
+} */
 /* 
 .all {
     display: none;
