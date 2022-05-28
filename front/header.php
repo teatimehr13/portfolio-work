@@ -1,4 +1,4 @@
-<div class="container_header">
+<div class="container_header sticky-top">
   <div class="container">
     <nav class="navbar navbar-expand-lg sticky-top header ">
       <a class="navbar-brand">Herny's House</a>

@@ -15,10 +15,10 @@ body{
 
 .container_header{
     background-color: rgba(245, 245, 245);
+    border-bottom: 1px solid rgba(200, 200, 200);
 }
 
 .header{
-    border-bottom: 1px solid rgba(200, 200, 200);
     line-height: 2.4;
 }
 
