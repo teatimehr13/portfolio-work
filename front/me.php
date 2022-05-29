@@ -1,7 +1,8 @@
-<div class="container pt-5">
+<div class="container pt-5" id="me">
 
-    <div class="py-4">
-        <span class="text-golden topic text-right">
+    <div class="py-4 text-center">
+    <span class="meLine"></span>
+        <span class="topic">
             <?= $Me->find(['sh' => '1'])['titles']; ?>
         </span>
         <span class="meLine"></span>
@@ -9,15 +10,9 @@
 
     <div class="row">
         <div class="col-md-6" >
-            <!-- <div class="row"> -->
                 <div class="item justify-content-center d-flex">
                     <div class="col-md-8"><img src=" ./img/<?= $Me->find(['sh' => '1'])['img']; ?>" class="img-fluid"></div>
                 </div>
-                <!-- <div class="col-md-1 mx-0 px-0 meButton">
-                    <button><i class="fas fa-arrow-right fa-2x right"></i></button>
-                    <button><i class="fas fa-arrow-left fa-2x left"></i></button>
-                </div> -->
-            <!-- </div> -->
         </div>
         <div class="col-md-6 d-flex align-items-center">
             <div class="col-md-10">

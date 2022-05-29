@@ -1,18 +1,20 @@
-<div class="container my-5">
+<div class="container my-5 pt-5" id="collection">
 
-    <div class="text-right pb-4">
+    <div class="text-center py-4">
         <span class="meLine"></span>
-        <span class="text-golden topic">
+        <span class="topic">
             <?= $Collection->find(['sh' => '1'])['titles']; ?>
         </span>
+        <span class="meLine"></span>
     </div>
 
     <div class="text-right pb-4">
+        <span>顯示：</span>
         <select id="col_opt" onchange="sort()" style="width: 80px; height:30px">
             <option value="0">全部</option>
             <?php
 
-            $col_opts = $Collection->all(['sh'=>'1']);
+            $col_opts = $Collection->all("where `sh`=1 Order By `rank` ASC ");
             foreach ($col_opts as $col) {
                 if ($col['sort'] != '') {
                     echo "<option value='{$col['id']}'>{$col['sort']}</option>";
@@ -27,14 +29,12 @@
         <?php
         $collections = $Collection->all(" where `sh`=1 Order By `rank` ASC");
         foreach ($collections as $collection) {
-        ?>  
-            <!-- data-skills=<?= $collection['sort_num']; ?> -->
+        ?>
             <div class="col-md-6 col-sm-12 col-lg-4 collection" data-skills="<?= $collection['sort_ids']; ?>">
-                <!-- <a href="<?= $collection['link_eyes']; ?>"><img src="./img/<?= $collection['img']; ?>" class="img-fluid py-3"></a> -->
                 <div class="colImg">
                     <div class="colImgHover img-fluid"></div>
                     <img src="./img/<?= $collection['img']; ?>" class="img-fluid imgPic">
-                    <a href="#" class="search"><i class="fas fa-search"></i></a>
+                    <a href="<?= $collection['link_eyes']; ?>" class="search"><i class="<?= $collection['icon_eyes']; ?>"></i></a>
                 </div>
 
 
@@ -58,20 +58,20 @@
         // alert(found);
     });
 
-    function sort(){
+    function sort() {
         let sort_id = $("#col_opt").val();
-        if(sort_id == '0'){
+        if (sort_id == '0') {
             $('.collection').show();
-        }else{
+        } else {
             let collections = document.querySelectorAll('.collection');
-            for(let i=0; i < collections.length; i++){
-                if(collections[i].dataset.skills.split(",").includes(sort_id)){
+            for (let i = 0; i < collections.length; i++) {
+                if (collections[i].dataset.skills.split(",").includes(sort_id)) {
                     collections[i].style.display = "block";
                 } else {
                     collections[i].style.display = "none";
                 }
             }
-    
+
         }
         // alert(123);
     }

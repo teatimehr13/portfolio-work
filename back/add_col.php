@@ -22,27 +22,34 @@
             <label for="sort">分類 : </label>
                 <select name="sort" class="form-control">
                     <option value="">--請選擇分類--</option>
-                    <option value="b2n">b2n</option>
-                    <option value="f2n">f2n</option>
-                    <option value="others">others</option>
+                    <option value="前端">前端</option>
+                    <option value="後端">後端</option>
+                    <option value="其他">其他</option>
                 </select>
         </div>
         <div class="form-group">
+            <td><label for="icon_eyes">圖示 : </label></td>
+            <select name="icon_eyes" class="form-control">
+                <option value="fas fa-search">search</option>
+            </select>
+
+        </div>
+        <!-- <div class="form-group">
             <label for="icon_eyes">圖示 : </label>
             <input type="text" name="icon_eyes" id="icon_eyes" class="form-control">
-        </div>
-        <div class="form-group">
+        </div> -->
+        <!-- <div class="form-group">
             <label for="icon_gh">圖示(gh) : </label>
             <input type="text" name="icon_gh" id="icon_gh" class="form-control"> 
-        </div>
+        </div> -->
         <div class="form-group">
             <label for="link_eyes">連結 : </label>
             <input type="text" name="link_eyes" id="link_eyes" class="form-control"> 
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="link_gh">連結(gh) : </label>
             <input type="text" name="link_gh" id="link_gh" class="form-control"> 
-        </div>
+        </div> -->
         <div class="form-group">
             <label for="rank">順序 : </label>
             <input type="text" name="rank" id="rank" class="form-control"> 

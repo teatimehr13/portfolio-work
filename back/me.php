@@ -58,8 +58,8 @@
                     <td>
                         <button type="button" class="btn btn-warning btn-sm" onclick="location.href='?do=edit_me&id=<?= $row['id']; ?>'">修改</button>
                         <button type="button" class="btn btn-danger btn-sm" onclick="del('pf_me',<?= $row['id']; ?>,'<?= $row['text']; ?>')">刪除</button><br>
-                        <button type="button" class="btn btn-secondary btn-sm switch"  data-switch="<?=$up?>">往上</button> <!--不可以用id命名2個switch-->
-                        <button type="button" class="btn btn-secondary btn-sm switch"  data-switch="<?=$down?>">往下</button>
+                        <!-- <button type="button" class="btn btn-secondary btn-sm switch"  data-switch="<?=$up?>">往上</button> 不可以用id命名2個switch -->
+                        <!-- <button type="button" class="btn btn-secondary btn-sm switch"  data-switch="<?=$down?>">往下</button> -->
                     </td>
                 </tr>
             <?php
