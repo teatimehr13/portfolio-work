@@ -284,9 +284,9 @@ body{
         margin-left: 0px;
     } */
 
-/* 
+
     @media (max-width:576px) {
-        .navbar{
+        /* .navbar{
             display: flex;
             background: url('../img/bg.png');
             border-bottom: none;
@@ -301,8 +301,12 @@ body{
         }
         .header{
             display: none;
+        } */
+
+        .meText{
+            margin-left: 0px;
         }
 
-    } */
+    } 
 
 /* } */

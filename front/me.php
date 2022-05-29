@@ -19,7 +19,7 @@
             <?php
             $mes = $Me->all(" where `sh`=1 ORDER BY rank");
             foreach ($mes as $me) {
-                echo "<div class='text-left meText'>{$me['text']}</div>";
+                echo "<div class='text-left meText' style='max-width:418px'>{$me['text']}</div>";
             }
             ?>
             </div>
